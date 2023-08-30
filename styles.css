@@ -267,6 +267,13 @@ header {
     /* transform: translateZ(10px); */
 }
 
+@media (max-width: 480px) {
+    .self-image {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
 /* custom scroll bar */
 /* Hide the default scrollbar */
 .image-container-row::-webkit-scrollbar {
