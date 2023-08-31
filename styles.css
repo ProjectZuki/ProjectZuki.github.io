@@ -259,7 +259,7 @@ header {
 
 /* styles for image in "About" section */
 .self-image {
-    margin-left: 13%;
+    margin-left: 12%;
     margin-bottom: -50px;
     max-width: 600px;
     max-height: 600px;
@@ -267,10 +267,12 @@ header {
     /* transform: translateZ(10px); */
 }
 
+/* adjust image size for smartphone displays */
 @media (max-width: 480px) {
     .self-image {
-        max-width: 300px;
-        max-height: 300px;
+        margin-left: 15%;
+        max-width: 175px;
+        max-height: 175px;
     }
 }
 
