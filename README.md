@@ -1,4 +1,5 @@
-# test-website
+# ProjectZuki.github.io
+# https://williealcaraz.me
 
 # Personal Portfolio Website
 
@@ -23,6 +24,8 @@ This website serves as my online presence and portfolio as a computer science st
 - Image gallery with interactive captions that appear on hover.
 - Smooth scrolling navigation to different sections.
 - Responsive design for optimal viewing on various devices.
+- Navigation buttons for easy viewing of content selection.
+- "Typing" animation on text titles.
 
 ## Technologies Used
 
@@ -44,5 +47,7 @@ git clone https://github.com/your-username/your-portfolio-website.git
 2. Customize contents via `index.html` and `styles.css`
 
 ## Contributing
+TBD
 
 ## License
+© 2023 Willie Alcaraz, all rights reserved
