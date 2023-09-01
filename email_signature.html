@@ -1,0 +1,112 @@
+<!-- This HTML code creates a structured email signature table with embedded CSS styling -->
+
+<!-- Google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- import 'Maven Pro' font -->
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+
+<table style="width: 100%; max-width: 700px; background-color: #ffffff; padding: 0px 15px;">
+    <!-- Embedded CSS Styles -->
+    <style>
+        h1, h3, p, a {
+            color: #000000; /* Text color for headings, paragraphs, and links */
+            font-family: 'Maven Pro', sans-serif; /* Font family for headings, paragraphs, and links */
+        }
+        h3 {
+            font-size: 18px; /* Font size for subheadings */
+        }
+        h1, h3, p {
+            margin: 0px; /* Removes margin for headings and paragraphs */
+        }
+        h3, p, a {
+            font-weight: 400; /* Font weight for headings, paragraphs, and links */
+        }
+        a {
+            text-decoration: none; /* Removes underlines from links */
+        }
+        td {
+            padding: 5px; /* Adds padding to table cells */
+        }
+        p, a {
+            font-size: 12px; /* Font size for paragraphs and links */
+            line-height: 15px; /* Line height for paragraphs and links */
+        }
+        img.icon {
+            background-color: transparent; /* Background color for icons */
+            width: 25px; /* Width of icons */
+        }
+        img.social_icon {
+            background-color: transparent; /* Background color for social icons */
+            width: 28px; /* Width of social icons */
+            margin: 0 3px; /* Margin around social icons */
+        }
+        .self-image {
+            border-radius: 50%; /* Rounds corners of self image */
+        }
+        .right-side-info {
+            margin-left: 15px; /* Adds margin to left side of text */
+        }
+    </style>
+
+    <!-- Table Body -->
+    <tbody>
+        <!-- First Row -->
+        <tr>
+            <td style="position: relative;">
+                <!-- Profile Image -->
+                <img src="https://williealcaraz.me/images/self_image.jpeg" class="self-image" alt="self image" width="150"/>
+                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 3px; background-color: grey; border-radius: 3px;"></div>
+
+            </td>
+            <!-- td style, add line divider to image -->
+            <td style="padding-right: 20%;">
+                <!-- Name and Title -->
+                <h1 class="right-side-info">Willie Alcaraz</h1>
+                <!-- <h3 class="right-side-info">Software Development</h3> -->
+                <!-- Nested Table for Contact Information -->
+                <table>
+                    <tbody>
+                        <!-- Phone -->
+                        <tr>
+                            <td>
+                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/phone_icon_black.png"/>
+                            </td>
+                            <td>
+                                <p><a href="tel:7023359213">702.335.9213</a></p>
+                            </td>
+                        </tr>
+                        <!-- Email -->
+                        <tr>
+                            <td>
+                                <img class="icon right-side-info" src="https://williealcaraz.me/images/email_icon.png"/>
+                            </td>
+                            <td>
+                                <p><a href="mailto:willie.alcaraz@gmail.com">willie.alcaraz@gmail.com</a></p>
+                            </td>
+                        </tr>
+                        <!-- Website -->
+                        <tr>
+                            <td>
+                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/link_icon.png"/>
+                            </td>
+                            <td>
+                                <p><a href="https://williealcaraz.me">www.williealcaraz.me</a></p>
+                            </td>
+                        </tr>
+                        <!-- LinkedIn Address -->
+                        <tr>
+                            <td>
+                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/linkedIn_icon_black.png"/>
+                            </td>
+                            <td>
+                                <p><a href="http://linkedin.com/in/williealcaraz" target="_blank">LinkedIn</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <!-- </tbody> -->
+</table>
