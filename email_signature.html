@@ -1,108 +1,112 @@
-<!-- This HTML code creates a structured email signature table with embedded CSS styling -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- import 'Maven Pro' font -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
 
-<!-- import 'Maven Pro' font -->
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
-
-<table style="width: 100%; max-width: 700px; background-color: #ffffff; padding: 0px 15px;">
-    <!-- Embedded CSS Styles -->
+    <!-- Your styles here -->
     <style>
+        /* Styles for headings, paragraphs, and links */
         h1, h3, p, a {
-            color: #000000; /* Text color for headings, paragraphs, and links */
-            font-family: 'Maven Pro', sans-serif; /* Font family for headings, paragraphs, and links */
+            color: #000000;
+            font-family: 'Maven Pro', sans-serif;
         }
+        
+        /* Font size for subheadings */
         h3 {
-            font-size: 18px; /* Font size for subheadings */
+            font-size: 18px;
         }
+        
+        /* Remove margin for headings and paragraphs */
         h1, h3, p {
-            margin: 0px; /* Removes margin for headings and paragraphs */
+            margin: 0px;
         }
+        
+        /* Font weight for headings, paragraphs, and links */
         h3, p, a {
-            font-weight: 400; /* Font weight for headings, paragraphs, and links */
+            font-weight: 400;
         }
+        
+        /* Remove underlines from links */
         a {
-            text-decoration: none; /* Removes underlines from links */
+            text-decoration: none;
         }
+        
+        /* Adds padding to table cells */
         td {
-            padding: 5px; /* Adds padding to table cells */
+            padding: 5px;
         }
+        
+        /* Font size and line height for paragraphs and links */
         p, a {
-            font-size: 12px; /* Font size for paragraphs and links */
-            line-height: 15px; /* Line height for paragraphs and links */
+            font-size: 12px;
+            line-height: 15px;
         }
+        
+        /* Background color and width for icons */
         img.icon {
-            background-color: transparent; /* Background color for icons */
-            width: 25px; /* Width of icons */
+            background-color: transparent;
+            width: 25px;
+            padding-right: 50px;
         }
+        
+        /* Background color, width, and margin for social icons */
         img.social_icon {
-            background-color: transparent; /* Background color for social icons */
-            width: 28px; /* Width of social icons */
-            margin: 0 3px; /* Margin around social icons */
+            background-color: transparent;
+            width: 28px;
+            margin: 0 3px;
         }
+        
+        /* Rounded corners for self-image */
         .self-image {
-            border-radius: 50%; /* Rounds corners of self image */
+            border-radius: 50%;
+        }
+        
+        /* Make the icon row display horizontally */
+        .icon-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center; /* Optional: Align items vertically */
         }
     </style>
-
-    <!-- Table Body -->
-    <tbody>
-        <!-- First Row -->
-        <tr>
-            <td style="position: relative;">
-                <!-- Profile Image -->
-                <!-- <img src="https://williealcaraz.me/images/self_image.jpeg" class="self-image" alt="self image" width="100"/> -->
-                <!-- Name and Title -->
-                <h1>Willie Alcaraz</h1>
-                <!-- <h3 class="right-side-info">Software Solutions</h3> -->
-                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 4px; background-color: grey; border-radius: 3px;"></div>
-            </td>
-            <!-- td style, add line divider to image -->
-            <td style="padding-right: 30%;">
-                <!-- Nested Table for Contact Information -->
-                <table>
-                    <tbody>
-                        <!-- Phone -->
-                        <tr>
-                            <td>
-                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/phone_icon_black.png"/>
-                            </td>
-                            <td>
-                                <p><a href="tel:7023359213">702.335.9213</a></p>
-                            </td>
-                        </tr>
-                        <!-- Email -->
-                        <tr>
-                            <td>
-                                <img class="icon right-side-info" src="https://williealcaraz.me/images/email_icon.png"/>
-                            </td>
-                            <td>
-                                <p><a href="mailto:willie.alcaraz@gmail.com">willie.alcaraz@gmail.com</a></p>
-                            </td>
-                        </tr>
-                        <!-- Website -->
-                        <tr>
-                            <td>
-                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/link_icon.png"/>
-                            </td>
-                            <td>
-                                <p><a href="https://williealcaraz.me">www.williealcaraz.me</a></p>
-                            </td>
-                        </tr>
-                        <!-- LinkedIn Address -->
-                        <tr>
-                            <td>
-                                <img class="icon right-side-info" src="https://williealcaraz.me/images/html_sig_icons/linkedIn_icon_black.png"/>
-                            </td>
-                            <td>
-                                <p><a href="http://linkedin.com/in/williealcaraz" target="_blank">LinkedIn</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    <!-- </tbody> -->
-</table>
+</head>
+<body>
+    <table style="width: 100%; max-width: 700px; background-color: #ffffff; padding: 0px 15px;">
+        <!-- Table Body -->
+        <tbody>
+            <!-- First Row -->
+            <tr>
+                <td style="position: relative;">
+                    <!-- Name -->
+                    <div class="self-image">
+                        <img src="https://williealcaraz.dev/images/signature_initials.png" style="width: 250px; height: 100px; margin-right: 15px"/>
+                    </div>
+                </td>
+            </tr>
+            <!-- Icons row -->
+            <tr>
+                <td style="position: relative;">
+                    <div class="icon-row">
+                        <a href="tel:7023359213">
+                            <img class="icon right-side-info" src="https://williealcaraz.dev/images/html_sig_icons/phone_icon_black.png" target="_blank"/>
+                        </a>
+                        <a href="mailto:willie.alcaraz@gmail.com" target="_blank">
+                            <img class="icon right-side-info" src="https://williealcaraz.dev/images/email_icon.png"/>
+                        </a>
+                        <a href="https://williealcaraz.dev" target="_blank">
+                            <img class="icon right-side-info" src="https://williealcaraz.dev/images/html_sig_icons/link_icon.png"/>
+                        </a>
+                        <a href="http://linkedin.com/in/williealcaraz" target="_blank">
+                            <img class="icon right-side-info" src="https://williealcaraz.dev/images/html_sig_icons/linkedIn_icon_black.png"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
