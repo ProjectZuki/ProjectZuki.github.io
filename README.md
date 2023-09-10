@@ -1,5 +1,5 @@
 # ProjectZuki.github.io
-# https://williealcaraz.me
+# https://williealcaraz.dev
 
 # Personal Portfolio Website
 
