@@ -2,6 +2,12 @@
    Main Styles
    ========================================================================== */
 
+   /* modify all fonts */
+a {
+    /* remove underline from text links */
+    text-decoration: none;
+}
+
 /* typography styles for the body */
 body {
     margin: 0;
