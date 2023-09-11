@@ -21,8 +21,17 @@ body {
     gap: 20px;
 }
 
-/* Update the .social-button class for nicely rounded rectangles */
-.social-button {
+.contact-card:hover {
+    
+}
+
+.contact-card:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Update the .contact-info-button class for nicely rounded rectangles */
+.contact-info-button {
     width: 400px; /* Set the width of the button */
     height: 150px; /* Set the height of the button */
     background-color: #6c6c6c; /* Dark grey background color */
@@ -37,7 +46,7 @@ body {
     overflow: hidden; /* Hide overflowing content */
 }
 
-.social-button::before {
+.contact-info-button::before {
     content: ""; /* Empty content for pseudo-element */
     position: absolute; /* Position the pseudo-element absolutely */
     top: 0; /* Position it at the top */
@@ -49,22 +58,22 @@ body {
     z-index: -1; /* Place it behind the button text */
 }
 
-.social-button:hover {
+.contact-info-button:hover {
     background-color: #d6d6d6;
     color: #333; /* Text color on hover (adjust as needed) */
 }
 
-.social-button:active {
+.contact-info-button:active {
     background-color: #ccc;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
-.social-button:hover::before {
+.contact-info-button:hover::before {
     height: 100%; /* Transition to full height on hover */
 }
 
-.social-button:active::before {
+.contact-info-button:active::before {
     height: 100%; /* Transition to full height on click */
 }
 
