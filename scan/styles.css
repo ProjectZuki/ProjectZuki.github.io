@@ -22,12 +22,11 @@ body {
 }
 
 .contact-card:hover {
-    
+    transform: translateY(6px);
 }
 
 .contact-card:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    transform: translateY(10px);
 }
 
 /* Update the .contact-info-button class for nicely rounded rectangles */
@@ -44,6 +43,9 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
     position: relative; /* Enable pseudo-element positioning */
     overflow: hidden; /* Hide overflowing content */
+
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-info-button::before {
@@ -66,7 +68,6 @@ body {
 .contact-info-button:active {
     background-color: #ccc;
     box-shadow: 0 5px #666;
-    transform: translateY(4px);
 }
 
 .contact-info-button:hover::before {
@@ -304,32 +305,6 @@ header {
     -ms-overflow-style: none; 
 }
 
-
-/* styles for the row of images */
-/* .image-container-row {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-} */
-
-/* styles for each image container individually */
-/* .image-container {
-    margin-right: 10px;
-    flex: 0 0 auto;
-    position: relative;
-    min-width: 300px;
-} */
-/* 
-.image-container img {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 3s, transform 3s;
-} */
-
-
 /* hover effect for the caption */
 .image-container:hover .caption {
     opacity: 1;
@@ -444,6 +419,13 @@ header {
     margin-bottom: 10%;
     text-align: center;
     color: rgb(148, 148, 148);
+}
+
+/* adjust bottom margin on mobile view */
+@media (max-width: 480px) {
+    .copyright-footer {
+        margin-bottom: 25%;
+    }
 }
 
 /* Custom font imported from Google */

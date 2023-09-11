@@ -122,47 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------------- end cursor text animations ---------------------- //
 
-  // // ----------------------- image gallery animation ------------------------ //
-
-  // // retrieve all elements within image-section class name
-  // const imageSections = document.querySelectorAll(".image-section");
-  // // retrieve first element within gallery-view class name
-  // const firstImageSection = document.querySelector(".gallery-view");
-
-  // // iterate through each image-section instance
-  // imageSections.forEach(imageSection => {
-  //   // retrieve all elements with animated-image class name
-  //   const animatedImages = imageSection.querySelectorAll('.animated-image');
-
-  //   // intersection observer will observe when image-section becomes visible
-  //   const imageObserver = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         // apply animation effect for each animated-image instance
-  //         animatedImages.forEach((image, index) => {
-  //           setTimeout(() => {
-  //             // horizontal translation: horizontal position + translation amount in pixels * (image position + 1)
-  //             // const translateX = 215 + 20 * (index + 1);
-  //             const opacity = 1;
-
-  //             // apply image styles
-  //             image.style.opacity = opacity;
-  //             image.style.transform = `translateX(${translateX}px)`;
-  //           }, index * 300); // delay each image animation
-  //         });
-          
-  //         // unobserve section
-  //         observer.unobserve(entry.target);
-  //       }
-  //     });
-  //   }, { threshold: 0.5 }); // threshold for intersection
-
-  //   // observe section
-  //   imageObserver.observe(imageSection);
-  // });
-
-  // // -------------------- end image gallery animations ---------------------- //
-
 });
 
 /// **************************** EOF script.js **************************** ///
