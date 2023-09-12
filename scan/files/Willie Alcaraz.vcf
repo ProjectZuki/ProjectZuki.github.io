@@ -7,7 +7,9 @@ item1.EMAIL;type=INTERNET;type=pref:willie.alcaraz@gmail.com
 item1.X-ABLabel:Personal
 item2.TEL;type=pref:(702) 335-9213
 item2.X-ABLabel:Personal
-item3.URL;type=pref:https://williealcaraz.me
+X-SOCIALPROFILE;type=Instagram;x-user=willie_alcaraz:x-apple:willie_alcaraz
+X-SOCIALPROFILE;type=linkedin:http://www.linkedin.com/in/williealcaraz
+item3.URL;type=pref:https://williealcaraz.dev
 item3.X-ABLabel:_$!<HomePage>!$_
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AKgAA
  AAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAA

@@ -10,7 +10,8 @@
  * @date 28 August 2023
  */
 
-const TITLE_TYPING_SPEED = 25;
+// typing speed, larger number = larger delay between char
+const TITLE_TYPING_SPEED = 125;
 const SECONDARY_TITLE_TYPING_SPEED = 75;
 
 document.addEventListener("DOMContentLoaded", () => {
