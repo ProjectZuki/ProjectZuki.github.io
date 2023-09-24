@@ -1,7 +1,7 @@
 # ProjectZuki.github.io
 # https://williealcaraz.dev
 
-For Software Design Document,visit [This Page](https://docs.google.com/document/d/1rVxH_2AbJ2l7cCA4USXoK7Ahz2ruiaSeW7AIL1vJR20/edit?usp=sharing)
+# [Software Design Document](https://docs.google.com/document/d/1rVxH_2AbJ2l7cCA4USXoK7Ahz2ruiaSeW7AIL1vJR20/edit?usp=sharing)
 
 # Personal Portfolio Website
 
