@@ -79,11 +79,36 @@ Successful completion of all elements of this website will anticipate the follow
 
 ## Section 2 | Scope of Work
 
+### 2.1.1 Website Features
 
-### 2.1 Project Scope and Features
 
 
-### 2.2 Target Audience
+* “About Me” Section: This will be a dedicated section about the creator, including a headshot as well as a descriptive explanation lightly hovering over their professional journey.
+* Contact Information: This section will have social links, as well as SMS and e-mail navigation links. For the time being, this will not yet be a contact form until sufficient back-end development has been implemented.
+* Interactive Elements: This website will feature easy-to-use navigation elements, such as navigation buttons (links that will redirect to parts of the page), contact buttons (SMS / e-mail button, social buttons), some visual elements, as well as other elements that will enhance the webpage.
+* Responsiveness: The website will be optimized to adapt to desktop environments, including Safari, FireFox, Chrome, and Edge, as well as mobile devices such as smartphones and tablets.
+    * This includes appropriate re-sizing, and maintaining the smooth-scrolling aspect.
+
+
+### 2.1.2 Content Management
+
+
+
+* Content of the website is set to be flexible, as this is key. The website will be updated regularly to expand the website’s content as the website grows.
+* Security Measures: HTTPS will be utilized in this website. When back-end development is implemented, strict security measures will be implemented to safeguard user information, if applicable, and protect against potential vulnerabilities.
+
+
+## 2.2 Target Audience
+
+This website aims to cater to potential employers to engage with the content and easily retrieve contact information about the user. Additionally, other visitors will be welcomed and greeted with easy to access contact information as well as a brief description of the creator in a professional manner.
+
+**Primary Audience: **Employers, recruiters, as well as hiring managers actively seeking for candidates are the primary target audience.
+
+**Networking Contacts: **Individuals who seek to connect with the individual for networking, whether professional or social, are an integral part of the audience, as this website will help establish professional relationships.
+
+**General Audience: ** Our website is designed to be accessible and engaging to a very broad audience without limitations, whether on a professional or personal level.
+
+Understanding these distinctive needs will guide our design and content decisions.
 
 ## Section 3 | Architecture and Design Stack**
 
