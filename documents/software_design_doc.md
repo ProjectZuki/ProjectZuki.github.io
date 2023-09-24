@@ -5,7 +5,6 @@
 
 ## Table of Contents
 
-- [About](#about)
 - [Section 1 | Introduction](#section-1--introduction)
 - [Section 2 | Scope of Work](#section-2--scope-of-work)
 - [Section 3 | Architecture and Design Stack](#section-3--architecture-and-design-stack)
