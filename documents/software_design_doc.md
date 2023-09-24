@@ -1,11 +1,24 @@
+# Personal Website | Software Design Document
+# https://williealcaraz.dev
+
+## [Link to Doc File](https://docs.google.com/document/d/1rVxH_2AbJ2l7cCA4USXoK7Ahz2ruiaSeW7AIL1vJR20/edit?usp=sharing)
+
 ## Table of Contents
 
+- [About](#about)
+- [Section 1 | Introduction](#section-1--introduction)
+- [Section 2 | Scope of Work](#section-2--scope-of-work)
+- [Section 3 | Architecture and Design Stack](#section-3--architecture-and-design-stack)
+- [Section 4 | Design and Content](#section-4--design-and-content)
+- [Section 5 | Content](#section-5--content)
+- [Section 6 | User Experience (UX)](#section-6--user-experience-ux)
+- [Section 7 | Functionality](#section-7--functionality)
+- [Section 8 | Technical Details](#section-8--technical-details)
+- [Section 9 | Testing Plan](#section-9--testing-plan)
+- [Section 10 | Deployment Strategy](#section-10--deployment-strategy)
+- [Section 11 | Timeline](#section-11--timeline)
+- [Section 12 | Version History](#section-12--version-history)
 
-[TOC]
-
-
-
-## 
 
 
 ## Section 1 | Introduction
@@ -20,8 +33,7 @@ In the current competitive landscape where growth requires proof of skill, we re
 The primary purpose of this personal website project is to create a personal website that will showcase personal and professional growth in the industry of choice, presented in a well-created website. This website shall also serve as a quick and effective means of obtaining contact information when requested via QR / NFC scan, or simply by navigation within the website.
 
 
-#### 
-    1.1.1 Showcasing 
+#### 1.1.1 Showcasing 
 
 
     The website is designed to exhibit the creator’s skills, professional accomplishments, and provide a comprehensive overview of experiences, qualifications, and other factors that are of interest when seeking information about the individual.
@@ -32,23 +44,20 @@ The primary purpose of this personal website project is to create a personal web
 The scope of work of this website consists of several elements to ensure a smooth and clean website with an efficient purpose. Execution of this plan will entail several elements, such as specific programming languages, formatting, frameworks, and other methods required by the content design.
 
 
-#### 
-    1.2.1 Content Strategy
+#### 1.2.1 Content Strategy
 
 
     Content will be presented in a professional and visually appealing manner to influence viewing of additional content on the website. There will be some form of an “About Me” section along with photographs of experiences will be included to familiarize the visitor with the outcomes of current exceptional achievements, including those not involving the industry. Contact information will be presented in a way that it will be easily accessible.
 
 
-#### 
-    1.2.2 Design / Layout
+#### 1.2.2 Design / Layout
 
 
     The website will have a clean layout, initially presented with a title of the person’s name and title upon entrance of the website. A photo of the individual will be presented as well, where the “About Me” section will reside. This section will contain information about the individual, achievements, and other necessary details followed by a photo gallery to better elaborate on the field of work of the individual’s achievements. Lastly, the contact information will reside at the bottom of the website, presenting email, LinkedIn links, as well as a link to the Resume / CV document. \
 Additionally, a landing page will be created to allow for a quick and effective way of exchanging contact information when presented with a QR code or NFC scan to the website. The subdirectory will be located in `/scan`
 
 
-#### 
-    1.2.3 Functionality, Performance Optimization
+#### 1.2.3 Functionality, Performance Optimization
 
 
     Implementing essential functionalities, such as a contact section or form for inquiries, and dynamic sections for adding / removing information as necessary. Optimization will include proper dynamic layouts for both desktop (i.e. Chrome, Safari, FireFox, Edge) as well as mobile (iOS, Android) regardless of screen size ensuring the website loads quickly and functions smoothly across all platforms.
@@ -76,7 +85,7 @@ Successful completion of all elements of this website will anticipate the follow
 
 ### 2.2 Target Audience
 
-**Section 3 | Architecture and Design Stack**
+## Section 3 | Architecture and Design Stack**
 
 
 ### 3.1 Front-end Technologies
@@ -88,8 +97,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 3.3 Hosting and Deployment Platform
 
 
-## 
-    Section 4 | Design and Content
+## Section 4 | Design and Content
 
 
 ### 4.1 Design Style
@@ -104,8 +112,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 4.4 Content Sections
 
 
-## 
-    Section 5 | Content
+## Section 5 | Content
 
 
 ### 5.1 Portfolio Sections
@@ -123,8 +130,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 5.5 QR Code \ NFC Scan Landing Page
 
 
-## 
-    Section 6 | User Experience (UX)
+## Section 6 | User Experience (UX)
 
 
 ### 6.1 User Flow
@@ -136,8 +142,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 6.3 Layout and Responsiveness
 
 
-## 
-    Section 7 | Functionality
+## Section 7 | Functionality
 
 
 ### 7.1 Portfolio Item Display
@@ -152,8 +157,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 7.4 Social Media Integration
 
 
-## 
-    Section 8 | Technical Details
+## Section 8 | Technical Details
 
 
 ### 8.1 Data Models
@@ -171,8 +175,7 @@ Successful completion of all elements of this website will anticipate the follow
 ### 9.2 Mobile Responsiveness Testing
 
 
-## 
-    Section 10 | Deployment Strategy
+## Section 10 | Deployment Strategy
 
 
 ### 10.1 Hosting Setup
@@ -185,8 +188,7 @@ Currently, this website is being hosted via GitHub Pages through the GitHub Educ
 The Domain was purchased via Namecheap.com with a .dev domain name.
 
 
-## 
-    Section 11 | Timeline
+## Section 11 | Timeline
 
 
 ### 11.1 Project Timeline
