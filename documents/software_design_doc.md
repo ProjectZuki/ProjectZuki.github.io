@@ -109,8 +109,39 @@ This website aims to cater to potential employers to engage with the content and
 
 Understanding these distinctive needs will guide our design and content decisions.
 
-## Section 3 | Architecture and Design Stack**
+## Section 3 | Architecture and Design Stack
 
+This section outlines the architecture and technology stack that will be utilized in the development of this website.
+
+
+## 3.1 Front-end Technologies
+
+
+
+* **HTML5: **Structure of the website’s content, semantic markups, and accessibility.
+* **CSS3: **Cascading Style Sheets (CSS3) will be utilized for the styles and designs of the website. This varies in purpose such as visual appeal, formatting, and presentation across devices such as Desktop and smartphone devices.
+* **JavaScript (JS):** JavaScript will be able to incorporate interactive elements as well as reactive elements of the website. Certain API’s may be required for implementation, which is dependent on how this website grows
+
+
+## 3.2 Back-end Technologies
+
+The back-end infrastructure supports the functionality and data management of the website. This will be integrated at a later time, but is not a priority until things such as a contact form are utilized.
+
+As a precaution, the following technologies may be applied if applicable:
+
+
+
+* **Server-Side Language: **Options include Node.js, Python, Ruby, etc.
+* **Database Management System (DBMS): **Options include DBMS, MySQL, PostgreSQL, MongoDB, etc. As of the creation of this design document, more knowledge on these integrations will be required before they can be implemented.
+* **API Integration: **API integration may be utilized to perform tasks such as real-time data retrieval and display.
+
+
+## 3.3 Hosting and Deployment Platform
+
+
+
+* **Web Hosting Provider: **GitHub Pages, via GitHub Education package, will be hosting the project via ProjectZuki.github.io. GitHub Pages proves to be a well-resourceful and reliable hosting provider.
+* **Version Control: **Along with Pages, GitHub will be utilized for version control, facilitating collaboration among team members and enabling efficient code management.
 
 ### 3.1 Front-end Technologies
 
