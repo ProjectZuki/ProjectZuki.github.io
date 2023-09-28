@@ -143,49 +143,92 @@ As a precaution, the following technologies may be applied if applicable:
 * **Web Hosting Provider: **GitHub Pages, via GitHub Education package, will be hosting the project via ProjectZuki.github.io. GitHub Pages proves to be a well-resourceful and reliable hosting provider.
 * **Version Control: **Along with Pages, GitHub will be utilized for version control, facilitating collaboration among team members and enabling efficient code management.
 
-### 3.1 Front-end Technologies
+
+# Section 4 | Design and Content
 
 
-### 3.2 Back-end Technologies
+This section will focus on the actual design aspect of the website. Such features include the physical design style, color scheme, choice of typography, as well as the content sections.
 
 
-### 3.3 Hosting and Deployment Platform
+## 4.1 Design Style
 
 
-## Section 4 | Design and Content
+
+* **Color Palette:** The selection of colors will be chosen based on a professional and visually appealing aesthetic. Emphasis will be placed on consistency and accessibility, as well as cleanliness and minimalism. Although we are not graphic designers nor color professionals we will choose a color scheme that is both clean and appropriate for the content, leaning towards a darker monotone rather than colors that pop out.
+* **Imagery:** High-quality and relevant images, including personal accomplishments, will be incorporated to provide a visual narrative. Although at the time of writing this, there are minimal images that can be used relating to the target industry, other images of exceptional work will be included (e.g. Vegas Golden Knights, international performances, etc.) will play a role in visualizing the creator’s accomplishments. Proper image optimization will ensure fast loading times. We would not add an 8K image to be loaded on an iPhone.
+* **Layout and Composition:** Layouts will be structured to guide users' attention, and compositions will be visually appealing while maintaining an intuitive flow of content.
+* **Icons and Graphics:** Consistent use of icons and graphics will enhance the visual and contribute to a cohesive design language.
 
 
-### 4.1 Design Style
+## 4.2 Typography
+
+A balanced and legible typography system will be implemented to enhance readability and convey the desired tone and style. Fonts chosen will align with the website's branding.
+
+Google fonts will be utilized for this project. Specific fonts are to be determined as the design for the website is created and finalized. Specifics on font type, size, and font family will be determined then.
 
 
-### 4.2 Color Scheme
+## 4.3 Content Sections
+
+Compelling and organized content is key to engaging and informing the target audience.
+
+NOTE: We do not want to bore the audience, nobody wants to read through a textbook of information.
+
+** Concise and to the point is key. **
 
 
-### 4.3 Typography
+
+* **Portfolio Items:** Detailed descriptions, images, and links to project profiles will be provided in the portfolio showcase. Each portfolio item will highlight the project's significance, skills utilized, and outcomes achieved.
+* **"About Me" Content: **The "About Me" section will include a concise yet engaging biography, emphasizing the creator's background, passions, and professional journey.
+* **Contact Information:** Contact details and a user-friendly contact form will be easily accessible to encourage inquiries, collaboration, and feedback.
+* **Resume/CV:** The resume/CV will be comprehensive, highlighting qualifications, education, work history, and skills. It will be available for viewing/download.
+* **Interactive Elements:** Dynamic content, animations, and interactive features will be strategically integrated to enhance engagement and storytelling. Navigation icons or links will be utilized for easy quick access to specific content sections.
+* **Content Updates:** An easily accessible content management system will allow the creator to regularly update and expand the website's content to reflect ongoing growth and accomplishments.
 
 
-### 4.4 Content Sections
+## 4.4 Brand and Identity
+
+Consistent branding elements will be applied throughout the website to contribute to the creator's personal and professional identity.
+
+Branding Elements:
 
 
-## Section 5 | Content
+
+* **Logo: **If applicable, a logo will be designed to represent the creator's personal brand.
+    * Currently, a signature initials logo may be utilized. No “official” logo exists. 
+    * Branding currently leans on the creator’s name.
+* **Colors and Typography:** The selected color palette and typography choices will align with the creator's personal branding, ensuring visual consistency. Professionalism is priority, rather than any artsy styling.
+* **Tone and Voice:** The website's content will reflect a consistent tone and voice that resonate with the creator's professional identity.
+
+# 
+    Section 5 | Content
 
 
-### 5.1 Portfolio Sections
+This section goes over the actual content that lies within each section of the website. Specifically, content sections that are guaranteed to be on the site. Additional content will be added in the future.
 
 
-### 5.2 “About Me” Section
+## 5.1 “About Me” Section
+
+This section will feature information about the creator, in a direct way so that those who come to this page will have a good understanding through the content provided.
 
 
-### 5.3 Projects section
+## 5.2 Projects Section
+
+The “Projects” section is to be determined based on the type of projects that come up. This website, along with its content requirements, source code, and other elements will be included as a project. This section is subject to growth and modification.
 
 
-### 5.4 Contact Information
+## 5.3 Contact Information
+
+The contact section will be utilized with quick-access links that will redirect to the creator’s email, and other personal contact information that is appropriate for sharing on a public website. This will be where the resume/cv will be available for viewing or download.
 
 
-### 5.5 QR Code \ NFC Scan Landing Page
+## 5.4 QR Code \ NFC Scan Landing Page
+
+This will be a separate subdirectory (/scan) that will be utilized specifically for QR codes as well as NFC business cards that, when presented and scanned, will redirect to this landing page. It will feature contact icons convenient for contacting the creator, as well as the .vcf file containing the contact information directly for download.
 
 
-## Section 6 | User Experience (UX)
+# Section 6 | User Experience (UX)
+
+This section focuses on information and contents of the website that directly affect the user experience. This includes things such as interactive elements. This section will focus on the user flow, navigation structure, as well as the overall layout and responsiveness of the elements within the website.
 
 
 ### 6.1 User Flow
