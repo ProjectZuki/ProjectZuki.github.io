@@ -11,8 +11,8 @@
  */
 
 // typing speed, larger number = larger delay between char
-const TITLE_TYPING_SPEED = 125;
-const SECONDARY_TITLE_TYPING_SPEED = 125;
+const TITLE_TYPING_SPEED = 75;
+const SECONDARY_TITLE_TYPING_SPEED = 50;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
@@ -100,18 +100,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // repeat above processes
   const contactText = "702.335.9213";
-  const contactTitleSpan = document.getElementById("phone-number-line");
+  const emailText = "willie.alcaraz@gmail.com";
+  const websiteText = "williealcaraz.dev";
+  const githubText = "ProjectZuki";
+  const contactTextSpan = document.getElementById("phone-number-line");
+  const emailTextSpan = document.getElementById("email-text-line");
+  const websiteTextSpan = document.getElementById("website-text-line");
+  const githubTextSpan = document.getElementById("github-text-line");
 
   const contactTitleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
-          animateTitleText(contactText, contactTitleSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
+          animateTitleText(contactText, contactTextSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
             setInterval(() => {
               cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
             }, 500);
           });
-        }, 3000);  //modify delay
+        }, 3000);  //modify delay for contactText
+
+        setTimeout(() => {
+          animateTitleText(emailText, emailTextSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
+            setInterval(() => {
+              cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
+            }, 500);
+          });
+        }, 4000);  //modify delay for emailText
+
+        setTimeout(() => {
+          animateTitleText(websiteText, websiteTextSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
+            setInterval(() => {
+              cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
+            }, 500);
+          });
+        }, 5000);  //modify delay for websiteText
+
+        setTimeout(() => {
+          animateTitleText(githubText, githubTextSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
+            setInterval(() => {
+              cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
+            }, 500);
+          });
+        }, 6000);  //modify delay for githubText
 
         // unobserve section
         contactTitleObserver.unobserve(entry.target);
