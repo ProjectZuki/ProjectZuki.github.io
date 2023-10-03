@@ -12,7 +12,7 @@
 
 // typing speed, larger number = larger delay between char
 const TITLE_TYPING_SPEED = 125;
-const SECONDARY_TITLE_TYPING_SPEED = 75;
+const SECONDARY_TITLE_TYPING_SPEED = 125;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Contact title animation ---
 
   // repeat above processes
-  const contactText = "Contact";
-  const contactTitleSpan = document.getElementById("contact-text-line");
+  const contactText = "702.335.9213";
+  const contactTitleSpan = document.getElementById("phone-number-line");
 
   const contactTitleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
             }, 500);
           });
-        }, 1000);  //modify delay
+        }, 3000);  //modify delay
 
         // unobserve section
         contactTitleObserver.unobserve(entry.target);
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, {threshold: 1.0}); // threshold or intersection
 
-  contactTitleObserver.observe(document.querySelector(".contact-text-title"));
+  contactTitleObserver.observe(document.querySelector(".phone-number-section"));
 
   // ---------------------- end cursor text animations ---------------------- //
 
