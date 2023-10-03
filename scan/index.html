@@ -1,6 +1,6 @@
 <!-- 
     File: index.html
-    Description:  file for williealcaraz.dev
+    Description:  file for williealcaraz.dev/scan
     Author: Willie Alcaraz
  -->
 
@@ -19,88 +19,84 @@
  <body>
     <!-- wrapper will act as body, for scrolling (another layer) -->
     <div class="wrapper">
-        <!-- background image for title -->
-        <!-- <div class="background"> -->
-            <!-- background image selection -->
-            <!-- <img src="images/code_background.png"> -->
-        <!-- </div> -->
+        <div class="vignette_border">
+            <div class="container">
+                <div class="self-image">
+                    <img src="images/self_image2.jpeg" class="self-image-class" alt="Self Image">
+                </div>
+                
+                <!-- title text will be animated for name -->
+                <header class="text-center">
+                    <!-- <h1 class="title title-slide-up">Willie Alcaraz</h1> -->
+                    <h1 class="title-text" id="title-text">
+                        <span class="title-text-line" id="title-text-line"></span>
+                        <span id="cursor-animation" class="cursor-animation">|</span>
+                        <p style="margin-top: 10px; font-size: medium;">CSN CS Academic Tutor • UNLV Computer Science</p>
+                    </h1>
+                </header>
+                
+                <div class="button-container">
+                    <a href="tel:7023359213" class="contact-info-button">
+                        <div class="icon-container">
+                            <span class="icon"><img src="images/html_sig_icons/whatsapp_icon.png" class="icon-img"></span>
+                        </div>
+                        <span class="button-text">702.335.9213</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="mailto:willie.alcaraz@gmail.com" target="_blank" class="contact-info-button">
+                        <div class="icon-container">
+                            <span class="icon"><img src="images/html_sig_icons/email_icon.png" class="icon-img"></span>
+                        </div>
+                        <span class="button-text">willie.alcaraz@gmail.com</span>
+                    </a>
+                </div>
+                
+                <div class="button-container">
+                    <a href="https://williealcaraz.dev" target="_blank" class="contact-info-button">
+                        <div class="icon-container">
+                            <span class="icon"><img src="images/html_sig_icons/globe.png" class="icon-img"></span>
+                        </div>
+                        <span class="button-text">williealcaraz.dev</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/ProjectZuki" target="_blank" class="contact-info-button">
+                        <div class="icon-container">
+                            <span class="icon>"><img src="images/html_sig_icons/github-mark.png" class="icon-img"></span>
+                        </div>
+                        <span class="button-text">ProjectZuki</span>
+                    </a>
+                </div>
 
-        <div class="container">
-            <div class="self-image">
-                <img src="images/self_image.jpeg" class="self-image-class" alt="Self Image">
-            </div>
-            
-            <!-- title text will be animated for name -->
-            <header class="text-center">
-                <!-- <h1 class="title title-slide-up">Willie Alcaraz</h1> -->
-                <h1 class="title-text" id="title-text">
-                    <span class="title-text-line" id="title-text-line"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                    <p style="margin-top: 10px; font-size: medium;">CSN CS Academic Tutor • UNLV Computer Science</p>
-                </h1>
-            </header>
-            
-            <div class="button-container">
-                <a href="tel:7023359213" class="contact-info-button">
-                    <div class="icon-container">
-                        <span class="icon"><img src="images/html_sig_icons/whatsapp_icon.png" class="icon-img"></span>
-                    </div>
-                    <span class="button-text">702.335.9213</span>
-                </a>
-            </div>
-            <div class="button-container">
-                <a href="mailto:willie.alcaraz@gmail.com" target="_blank" class="contact-info-button">
-                    <div class="icon-container">
-                        <span class="icon"><img src="images/html_sig_icons/email_icon.png" class="icon-img"></span>
-                    </div>
-                    <span class="button-text">willie.alcaraz@gmail.com</span>
-                </a>
-            </div>
-            
-            <div class="button-container">
-                <a href="https://williealcaraz.dev" target="_blank" class="contact-info-button">
-                    <div class="icon-container">
-                        <span class="icon"><img src="images/html_sig_icons/globe.png" class="icon-img"></span>
-                    </div>
-                    <span class="button-text">williealcaraz.dev</span>
-                </a>
-            </div>
-            <div class="button-container">
-                <a href="https://github.com/ProjectZuki" target="_blank" class="contact-info-button">
-                    <div class="icon-container">
-                        <span class="icon>"><img src="images/html_sig_icons/github-mark.png" class="icon-img"></span>
-                    </div>
-                    <span class="button-text">ProjectZuki</span>
-                </a>
+                <div class="button-container">
+                    <a href="files/Willie Alcaraz.vcf" target="_blank" class="contact-card">
+                        <!-- temp fixes until i figure out a better way to align this -->
+                        <div class="icon-container" style="margin-top: 12px;">
+                            <span class="icon"><img src="images/html_sig_icons/contact_card.png" class="icon-img" style="margin-top: 10px;"></span>
+                            <!-- style is another temp fix -->
+                            <p style="margin-top: -10px;">Save Contact</p>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/williealcaraz" target="_blank" class="contact-card">
+                        <div class="icon-container">
+                            <span class="icon"><img src="images/html_sig_icons/in.png" class="icon-img" style="margin-top: 10px;"></span>
+                        </div>
+                        <span class="button-text"></span>
+                    </a>
+                    <a href="https://instagram.com/willie_alcaraz" target="_blank" class="contact-card">
+                        <div class="icon-container">
+                            <span class="icon"><img src="images/html_sig_icons/ig.png" class="icon-img" style="margin-top: 10px;"></span>
+                        </div>
+                    </a>
+                </div>
             </div>
 
-            <div class="button-container">
-                <a href="files/Willie Alcaraz.vcf" target="_blank" class="contact-card">
-                    <!-- temp fixes until i figure out a better way to align this -->
-                    <div class="icon-container" style="margin-top: 12px;">
-                        <span class="icon"><img src="images/html_sig_icons/contact_card.png" class="icon-img" style="margin-top: 10px;"></span>
-                        <!-- style is another temp fix -->
-                        <p style="margin-top: -10px;">Save Contact</p>
-                    </div>
-                </a>
-                <a href="https://linkedin.com/in/williealcaraz" target="_blank" class="contact-card">
-                    <div class="icon-container">
-                        <span class="icon"><img src="images/html_sig_icons/in.png" class="icon-img" style="margin-top: 10px;"></span>
-                    </div>
-                    <span class="button-text"></span>
-                </a>
-                <a href="https://instagram.com/willie_alcaraz" target="_blank" class="contact-card">
-                    <div class="icon-container">
-                        <span class="icon"><img src="images/html_sig_icons/ig.png" class="icon-img" style="margin-top: 10px;"></span>
-                    </div>
-                </a>
-            </div>
+            <!-- copyright footer -->
+            <footer class="text-center">
+                <div class="copyright-footer">&copy; 2023 Willie Alcaraz. All rights reserved.</div>
+            </footer>
         </div>
-
-        <!-- copyright footer -->
-        <footer class="text-center">
-            <div class="copyright-footer">&copy; 2023 Willie Alcaraz. All rights reserved.</div>
-        </footer>
     </div>
 
     <!-- jQuery (required by Bootstrap) from CDN -->
