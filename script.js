@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- "About" typing animation ---
 
   // required variables for elements
-  const aboutText = "About";  // text to be animated
+  const aboutText = "About Me ...";  // text to be animated
   const aboutTitleSpan = document.getElementById("about-text-line");  // id of title to be animated
 
   // intersection observer for the "About" title section will delay animation until user scrolls to about-text-title section
