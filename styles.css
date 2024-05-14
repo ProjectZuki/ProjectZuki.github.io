@@ -29,13 +29,13 @@ html {
    -------------------------------------------------------------------------- */
 
 /* styles for the loading bar */
-.loading-screen {
+/* .loading-screen {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #333;
-  }
+  } */
   
 /* This is honestly just a fake loading bar for the looks */
 .loader {
