@@ -50,5 +50,5 @@ git clone https://github.com/your-username/your-portfolio-website.git
 TBD
 
 ## License
-This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.</br>
 © 2024 Willie Alcaraz | [Project]Zuki, all rights reserved
