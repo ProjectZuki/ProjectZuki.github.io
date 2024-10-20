@@ -127,7 +127,7 @@ header {
 
 /* title animation class */
 .title-slide-up {
-    animation: slideUpAnimation 2s ease-in-out;
+    animation: slideUpAnimation 1s ease-in-out;
 }
 
 /* background image styles */
