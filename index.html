@@ -172,81 +172,200 @@
                         <!-- utilize same cursor element as previously -->
                         <span id="cursor-animation" class="cursor-animation">|</span>
                     </h2>
-                    <h3><strong>Personal Webpage</strong></h3>
-                    <p>
-                        This webpage showcases effects such as parallax as well as animations to create
-                        a responsive webpage to serve as a personal portfolio / website.<br>
-                        <i><u>Key Features:</u></i>
-                        <ul class="feature-list">
-                            <li>Dynamic animations</li>
-                            <li>Smooth scrolling</li>
-                            <li>Parallax</li>
-                            <li>Stylized sections</li>
-                            <li>Interactive navigation buttons</li>
-                        </ul>
-                        <i><u>Technologies utilized:</u></i>
-                        <ul class="feature-list">
-                            <li>HTML, CSS</li>
-                            <li>JavaScript</li>
-                            <li>Intersection Observer API</li>
-                            <li>Bootstrap framework</li>
-                            <li>GitHub</li>
-                        </ul>
-                        <br>
-                    </p>
+                    
+                    <!-- two column presentation -->
+                    <div class="row">
 
-                    <hr style="border-top: 1px solid #ccc; border-bottom: none; margin: 20px 0;">
+                        <!-- Project Description -->
+                        <div class="col-md-6">
+                            <h3><strong>LED Control Module</strong></h3>
+                            <!-- Images Section -->
+                            <div class="row mb-3">
+                                <!-- Show as video with aspect ratio control -->
+                                <div class="col-md-6 mb-2">
+                                    <div class="image-wrapper">
+                                        <video autoplay loop muted class="img-fluid rounded shadow-sm" loading="lazy">
+                                            <source src="images/ProjectImages/LEDModule0.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                
+                                <!-- Image with aspect ratio control -->
+                                <div class="col-md-6 mb-2">
+                                    <div class="image-wrapper">
+                                        <img src="images/ProjectImages/LEDModule1.jpg" alt="Real-World testing" class="img-fluid rounded shadow-sm">
+                                    </div>
+                                </div>
+                            </div>
 
-                    <!-- TODO: Add images, screenshots, gifs -->
-                    <h3><strong>F1tenth Autonomus Racing</strong></h3>
-                    <p>
-                        A collaborative effort aimed at developing an autonomous vehicle capable of swiftly and proficiently 
-                         navigating tracks, achieved using environmental sensors and algorithms 
-                         to make real-time decisions based on the environment<br>
-                        <i><u>Key Features:</u></i>
-                        <ul class="feature-list">
-                            <li>ROS (Robot Operating System)</li>
-                            <li>Docker</li>
-                            <li>Autonomus Navigation (path planning, obstacle avoidance, etc.)</li>
-                            <li>SLAM (Simultaneous Localization and Mapping)</li> 
-                            <li>Computer Vision</li>
-                            <li>Deep Learning</li>
-                        </ul>
-                        <i><u>Technologies utilized:</u></i>
-                        <ul class="feature-list">
-                            <li>Python</li>
-                            <li>C++</li>
-                            <li>TensorFlow</li>
-                            <li>LiDAR</li>
-                            <li>Depth-Sensing Imagery</li>
-                        </ul>
-                        <br>
-                    </p>
+                            <p>
+                                Developed a custom drum trigger LED module tailored for the Drumbots to enhance their performances
+                                 for the Vegas Golden Knights as well as local and international performances.<br>
+                                <i><u>Highlights:</u></i>
+                                <ul class="feature-list">
+                                    <li>Dynamic LED customization</li>
+                                    <li>Drum trigger interaction with LED lighting</li>
+                                    <li>ARGB strip integration for customized lighting effects</li>
+                                    <li>Scalable and reliable design</li>
+                                    <li>Real-time responsiveness for rhythmic trigger</li>
+                                </ul>
+                                <i><u>Technologies and Tools:</u></i>
+                                <ul class="feature-list">
+                                    <li>C++ (AVR-GCC Compiler)</li>
+                                    <li>Arduino microcontroller</li>
+                                    <li>Piezo and Infrared sensors</li>
+                                    <li>Embedded systems design</li>
+                                </ul>
+                            </p>
 
-                    <hr style="border-top: 1px solid #ccc; border-bottom: none; margin: 20px 0;">
+                            <a href="https://github.com/ProjectZuki/led-control-module" class="btn btn-outline-dark btn-github" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
 
-                    <!-- TODO: Add screenshots, add more projects -->
-                    <h3><strong>iOS App</strong></h3>
-                    <p>
-                        This iOS app is a prototype for creating and managing events that aids in managing
-                        client and event information, inspired by my work in the entertainment industry.<br>
-                        <i><u>Key Features:</u></i>
-                        <ul class="feature-list">
-                            <li>Event creation / management</li>
-                            <li>Client profile tracking</li>
-                        </ul>
-                        <i><u>Technologies utilized:</u></i>
-                        <ul class="feature-list">
-                            <li>SwiftUI Implementation</li>
-                            <li>Edit functionality</li>
-                            <li>Navigation struct, vstack</li>
-                            <li>JSON encoding / decoding.</li>
-                        </ul>
-                        <br>
-                    </p>
+                            <hr>
+                        </div>
+
+                        
+                        <!-- Project Description -->
+                        <div class="col-md-6">
+                            <h3><strong>F1tenth Autonomous Racing</strong></h3>
+                            <!-- Images Section -->
+                            <div class="row mb-3">
+                                <!-- First Image (GIF or Video) -->
+                                <div class="col-md-6 mb-2">
+                                    <div class="image-wrapper">
+                                        <!-- show as video -->
+                                        <video autoplay loop muted class="img-fluid rounded shadow-sm" loading="lazy">
+                                            <source src="images/ProjectImages/F1Tenth0.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                
+                                <!-- Second Image (GIF or Video) -->
+                                <div class="col-md-6 mb-2">
+                                    <div class="image-wrapper">
+                                        <!-- show as video -->
+                                        <video autoplay loop muted class="img-fluid rounded shadow-sm" loading="lazy">
+                                            <source src="images/ProjectImages/F1Tenth1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p>
+                                A collaborative effort developing an autonomous vehicle capable of navigating tracks quickly and efficiently,
+                                 using environmental sensors and algorithms to make real-time decisions while minimizing error.<br>
+                                <i><u>Key Features:</u></i>
+                                <ul class="feature-list">
+                                    <li>Autonomous Navigation Algorithms Development</li>
+                                    <li>Simultaneous Localization and Mapping (SLAM)</li>
+                                    <li>Deep Learning</li>
+                                </ul>
+                                <i><u>Technologies utilized:</u></i>
+                                <ul class="feature-list">
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>ROS (Robot Operating System)</li>
+                                    <li>Docker</li>
+                                    <li>LiDAR</li>
+                                    <li>TensorFlow</li>
+                                </ul>
+                            </p>
+
+                            <!-- GitHub Repository Link -->
+                            <a href="https://github.com/ProjectZuki/GalacticRacing" class="btn btn-outline-dark btn-github" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+
+                            <hr>
+                        </div>
+
+                        <!-- Project Description -->
+                        <div class="col-md-6">
+                            <h3><strong>Personal Webpage</strong></h3>
+                            <p>
+                                This webpage showcases effects such as parallax as well as animations to create a responsive webpage 
+                                to serve as a personal portfolio / website as well as a continous project to learn and explore features.<br>
+                                <i><u>Key Features:</u></i>
+                                <ul class="feature-list">
+                                    <li>Dynamic animations</li>
+                                    <li>Smooth scrolling</li>
+                                    <li>Parallax</li>
+                                    <li>Interactive elements</li>
+                                </ul>
+                                <i><u>Technologies utilized:</u></i>
+                                <ul class="feature-list">
+                                    <li>HTML, CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Intersection Observer API</li>
+                                    <li>Bootstrap framework</li>
+                                    <!-- <li>GitHub</li> -->
+                                </ul>
+                            </p>
+
+                            <!-- GitHub Repository Link -->
+                            <a href="https://github.com/ProjectZuki/ProjectZuki.github.io" class="btn btn-outline-dark btn-github" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                            <hr>
+                        </div>
+                        
+                        <!-- Project Description -->
+                        <div class="col-md-6">
+                            <h3><strong>CNN Seizure Prediction</strong></h3>
+                            <p>
+                                Contributed to a group project developing a convolutional neural network to predict seizures using raw electroencephalogram (EEG) data and spectrograms, 
+                                demonstrating machine learning applications in healthcare.<br>
+                                <i><u>Key Features:</u></i>
+                                <ul class="feature-list">
+                                    <li>EEG data preprocessing</li>
+                                    <li>Spectrogram analysis</li>
+                                    <li>Convolutional Neural Network (CNN)</li>
+                                    <li>Seizure detection</li>
+                                </ul>
+                                <i><u>Technologies utilized:</u></i>
+                                <ul class="feature-list">
+                                    <li>Python</li>
+                                    <li>TensorFlow</li>
+                                    <li>Numpy</li>
+                                    <li>Matplotlib</li>
+                                </ul>
+                            </p>
+                            
+                            <!-- GitHub Repository Link -->
+                            <a href="https://github.com/ProjectZuki/cs422-EEG-Classification" class="btn btn-outline-dark btn-github" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                            
+                            <hr>
+                        </div>
+
+                        <!-- Project Description -->
+                        <!-- <div class="col-md-6">
+                            <h3><strong>iOS App</strong></h3>
+                            <p>
+                                This iOS app is a prototype for managing events and client profiles, inspired by work in the 
+                                entertainment industry.<br>
+                                <i><u>Key Features:</u></i>
+                                <ul class="feature-list">
+                                    <li>Event creation and management</li>
+                                    <li>Client profile tracking</li>
+                                </ul>
+                                <i><u>Technologies utilized:</u></i>
+                                <ul class="feature-list">
+                                    <li>SwiftUI</li>
+                                    <li>JSON encoding/decoding</li>
+                                    <li>Navigation struct</li>
+                                    <li>Edit functionality</li>
+                                </ul>
+                            </p>
+                            <hr>
+                        </div> -->
+                    </div>
                 </div>
-                
             </section>
+
 
             <!-- vertical padding for contact section -->
             <section class="py-5 contact-section">
