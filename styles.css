@@ -127,7 +127,7 @@ header {
 
 /* title animation class */
 .title-slide-up {
-    animation: slideUpAnimation 2s ease-in-out;
+    animation: slideUpAnimation 1s ease-in-out;
 }
 
 /* background image styles */
@@ -397,7 +397,7 @@ header {
 /* styles for list contents to appear side-by-side */
 .feature-list li {
     display: inline-block;
-    width: 48%; /* Adjust the width as needed */
+    width: 100%;
     margin: 5px;
     padding-left: 20px;
     position: relative;
@@ -458,5 +458,27 @@ header {
     font-size: large;
     color: white;
 }
+
+/* --------------------------------------------------------------------------
+    Gif image styles
+   -------------------------------------------------------------------------- */
+
+.image-wrapper {
+    aspect-ratio: 4 / 3; /* Ensures a 4:3 container */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video.img-fluid,
+img.img-fluid {
+    object-fit: cover; /* Maintains aspect ratio without stretching */
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 /* ============================= EOF styles.css ============================= */

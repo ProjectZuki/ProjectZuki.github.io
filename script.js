@@ -11,7 +11,7 @@
  */
 
 const TITLE_TYPING_SPEED = 25;
-const SECONDARY_TITLE_TYPING_SPEED = 75;
+const SECONDARY_TITLE_TYPING_SPEED = 50;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         // recursive call function until completion
         animateTitleText(text, spanElement, cursorElement, index, typeSpeed, callback);
-      }, typeSpeed); // delay amount for each character, speed of typing animatino
+      }, typeSpeed - 20); // delay amount for each character, speed of typing animation
+                          /// NOTE: lower -> faster
     } else {
       callback(); // Call the callback function once typing is done
     }
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Text for typing animation
   const subtitle_line1 = "Las Vegas, Nevada";
-  const subtitle_line2 = "Website & Software Development / Engineering | UNLV Computer Science";
+  const subtitle_line2 = "UNLV B.S. Computer Science | Software Development / Engineering";
 
   // Span elements where typing animation will be displayed
   const subtitle1Span = document.getElementById("subtitle-line1");
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
       }, 500); // cursor element blink delay
     });
-  }, 1750); // Delay before starting line2 typing
+  }, 750); // Delay before starting line2 typing
 
   // --- "About" typing animation ---
 
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
             }, 500);
           });
-        }, 1000); // modify delay for typing animation to begin once initiated
+        }, 500); // modify delay for typing animation to begin once initiated
 
         // Unobserve the section to prevent unnecessary animations
         aboutTitleObserver.unobserve(entry.target);
@@ -118,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
             }, 500);
           });
-        }, 1000); // modify delay
+        }, 500); // modify delay
 
         // Unobserve the section to prevent unnecessary animations
         galleryTitleObserver.unobserve(entry.target);
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
             }, 500);
           });
-        }, 1000);  //modify delay
+        }, 500);  //modify delay
 
         // unobserve section
         projectsTitleObserver.unobserve(entry.target);
@@ -169,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
               cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
             }, 500);
           });
-        }, 1000);  //modify delay
+        }, 500);  //modify delay
 
         // unobserve section
         contactTitleObserver.unobserve(entry.target);
@@ -224,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
               // apply image styles
               image.style.opacity = opacity;
               image.style.transform = `translateX(${translateX}px)`;
-            }, index * 300); // delay each image animation
+            }, index * 150); // delay each image animation
           });
           
           // unobserve section
@@ -264,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //         // delay reset scrolling
   //         setTimeout(() => {
   //           scrolling = false;
-  //         }, 1000); // delay amount
+  //         }, 500); // delay amount
   //       }
   //     });
 
