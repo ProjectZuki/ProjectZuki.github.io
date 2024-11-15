@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // cursor element for animation
   const cursorElement = document.getElementById("cursor-animation");
 
-  // --- title typing animation ---
+  // ------------------------ title typing animation ------------------------
 
   // Text for typing animation
   const subtitle_line1 = "Las Vegas, Nevada";
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 750); // Delay before starting line2 typing
 
-  // --- "About" typing animation ---
+  // ------------------------ "About" typing animation ------------------------
 
   // required variables for elements
   const aboutText = "About Me ...";  // text to be animated
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Observe the "About" title section
   aboutTitleObserver.observe(document.querySelector(".about-text-title"));
 
-  // --- "Gallery" title animation ---
+  // ------------------------ "Gallery" title animation ------------------------
 
   // ... repeat above process
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Observe the "Gallery" title section once gallery-text-title has been scrolled to
   galleryTitleObserver.observe(document.querySelector(".gallery-text-title"));
 
-  // --- Projects title animation ---
+  // ------------------------ Projects title animation ------------------------
 
   // repeat above processes
   const projectsText = "Projects";
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   projectsTitleObserver.observe(document.querySelector(".projects-text-title"));
 
-  // --- Contact title animation ---
+  // ------------------------ Contact title animation ------------------------
 
   // repeat above processes
   const contactText = "Contact";

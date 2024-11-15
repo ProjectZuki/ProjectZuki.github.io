@@ -21,7 +21,9 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    background-color: rgb(35, 35, 35);
+    /* background-color: rgb(35, 35, 35); */
+    background: linear-gradient(135deg, #525252, #000000);
+
 }
 
 /* --------------------------------------------------------------------------
@@ -419,23 +421,50 @@ header {
 } 
 
 .contact-container {
-    background-color: rgb(203, 203, 203);
+    background-color: #1e1e1e; /* Dark gray for the background */
     text-align: center;
     font-size: large;
-    color: #333;
+    color: #f5f5f5; /* Light gray for text */
+    padding: 20px;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 .contact-icons {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px; /* Spacing between items */
+    margin-top: 15px;
 }
 
 .contact-icon {
-    margin-right: 4px;
+    margin-right: 8px;
     width: 30px;
     height: 30px;
+    filter: invert(1); /* Ensures icons adapt to the dark background */
+}
+
+.contact-thing a {
+    text-decoration: none;
+    color: #00aaff; /* Accent color for links */
+    transition: color 0.3s ease;
+}
+
+.contact-thing a:hover {
+    color: #ffaa00; /* Hover effect for links */
+}
+
+.contact-text-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f5f5f5; /* Title text color */
+}
+
+#cursor-animation {
+    color: #00aaff; /* Cursor matches accent color */
 }
 
 /* --------------------------------------------------------------------------
