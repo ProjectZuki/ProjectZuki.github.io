@@ -460,7 +460,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-    Gif image styles
+    Gif image / video styles
    -------------------------------------------------------------------------- */
 
 .image-wrapper {
@@ -473,12 +473,9 @@ header {
 
 video.img-fluid,
 img.img-fluid {
-    object-fit: cover; /* Maintains aspect ratio without stretching */
+    object-fit: cover; /* Ensures aspect ratio and fills container without distortion */
     width: 100%;
     height: 100%;
 }
-
-
-
 
 /* ============================= EOF styles.css ============================= */
