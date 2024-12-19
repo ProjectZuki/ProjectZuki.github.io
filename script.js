@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Text for typing animation
   const subtitle_line1 = "Las Vegas, Nevada";
-  const subtitle_line2 = "UNLV B.S. Computer Science | Software Development / Engineering";
+  const subtitle_line2 = "UNLV B.S. Computer Science | Software Engineering";
 
   // Span elements where typing animation will be displayed
   const subtitle1Span = document.getElementById("subtitle-line1");
