@@ -155,6 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Setup for each title
     // Note: The section renaming ("My Journey" to "Timeline", "Let's Connect!" to "Contact Me")
     // will be handled in the next plan step. The JS will use the new names here.
+
+    // Typing animation for "Willie Alcaraz" in About Me section
+    setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
+
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
     setupTitleAnimation("skills-title-container", "skills-title-text", "Skills");
     setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");

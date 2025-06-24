@@ -115,10 +115,9 @@ a:hover {
     max-width: 300px; /* Adjust as needed */
     height: auto;
     margin-bottom: 1.5rem;
-    /* Optional: if the image needs specific color treatment for dark theme, e.g., if it's a dark signature on dark background */
-    /* filter: invert(1) brightness(1.5); */ /* Example: inverts and brightens */
     animation: fadeInScaleUp 0.8s ease-out 0.2s forwards;
     opacity: 0; /* Start hidden for animation */
+    /* filter attribute will be applied by .filter-to-white if class is present in HTML */
 }
 
 @keyframes fadeInScaleUp {
@@ -167,6 +166,32 @@ a:hover {
     transform: translateY(-3px);
 }
 
+.hero-nav-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 0.5rem; /* Spacing between buttons */
+}
+
+.hero-nav-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    color: #00cdd7; /* Accent color for text */
+    border: 1px solid #00cdd7; /* Accent color border */
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-nav-button:hover {
+    background-color: #00cdd7;
+    color: #121212; /* Dark text on hover */
+    transform: translateY(-2px);
+}
+
+
 /* ==========================================================================
    About Section
    ========================================================================== */
@@ -201,12 +226,12 @@ a:hover {
 .social-links-about .social-icon {
     width: 30px;
     height: 30px;
-    filter: grayscale(100%) brightness(150%); /* Making icons adapt to dark theme, adjust as needed */
+    /* filter: grayscale(100%) brightness(150%); */ /* Removed old filter */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-links-about .social-icon:hover {
-    filter: grayscale(0%) brightness(100%);
+    filter: none; /* Remove .filter-to-white on hover to show original color */
     transform: scale(1.1);
 }
 
@@ -376,19 +401,29 @@ a:hover {
 
 .project-card {
     background-color: #1e1e1e;
-    border-radius: 8px;
+    border-radius: 15px; /* Increased border-radius for more rounded corners */
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     height: 100%; /* Ensure cards in a row have same height */
-    display: flex;
-    flex-direction: column;
+    border: 1px solid #444; /* Default subtle border */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 205, 215, 0.3); /* Accent shadow on hover */
+    border-color: #00cdd7; /* Accent color border on hover */
 }
+
+.project-image-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .project-card:hover { Duplicated rule, removing
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 205, 215, 0.3);
+} */
 
 .project-image-container {
     width: 100%;
@@ -540,26 +575,23 @@ a:hover {
 .social-links-contact .social-icon {
     width: 35px; /* Slightly larger for contact section */
     height: 35px;
-    filter: grayscale(100%) brightness(150%);
+    /* filter: grayscale(100%) brightness(150%); */ /* Removed old filter */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-links-contact .social-icon:hover {
-    filter: grayscale(0%) brightness(100%);
+    filter: none; /* Remove .filter-to-white on hover to show original color */
     transform: scale(1.15);
 }
 
 .signature-image {
     max-width: 150px; /* Adjust as needed */
     height: auto;
-    /* A CSS filter to change white/light parts of an image to a specific hex color like #00cdd7 is complex.
-       A simple approach for a glow image might be to make it mostly white and then use drop-shadow with the desired color.
-       Or, if the image `signature_initials_glow.png` already has a neutral glow, we might not need a filter, or just a brightness/contrast adjustment.
-       The previous filter was an attempt to colorize. A new filter for #00cdd7: This is a best guess.
-       It will highly depend on the base colors of `signature_initials_glow.png`.
-       If `signature_initials_glow.png` is mostly light/white, this might give a blue tint.
-       Consider removing filter if the image is already suitable or using an SVG for easier color manipulation. */
-    filter: brightness(0) saturate(100%) invert(83%) sepia(20%) saturate(4748%) hue-rotate(138deg) brightness(104%) contrast(103%);
+    /* Colorization is now handled by .filter-to-white if that class is applied to this element */
+}
+
+.filter-to-white {
+    filter: grayscale(1) brightness(200%) invert(1); /* Converts to white, brightness(200%) can help if original is dark */
 }
 
 /* Cursor animation styles */
@@ -657,9 +689,9 @@ a:hover {
 }
 
 /* Optional: Add smooth transition for all elements */
-* {
+/* * {
     transition: all 0.2s ease-in-out;
-}
+} */
 /* Be cautious with the above, it can sometimes have unintended performance consequences or override specific transitions.
    It's often better to apply transitions only where needed.
    Removing it for now to be more specific.
