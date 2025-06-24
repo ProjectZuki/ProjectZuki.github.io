@@ -20,7 +20,7 @@ html {
 }
 
 a {
-    color: #bb86fc; /* Accent color for links */
+    color: #00cdd7; /* Accent color for links */
     text-decoration: none;
 }
 
@@ -105,10 +105,31 @@ a:hover {
 .hero-content .name-title {
     font-size: 1.8rem; /* Smaller, letter-spaced title */
     letter-spacing: 0.3em;
-    color: #bb86fc; /* Accent color */
+    color: #00cdd7; /* Accent color */
     margin-bottom: 1rem;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+.hero-signature-image {
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 1.5rem;
+    /* Optional: if the image needs specific color treatment for dark theme, e.g., if it's a dark signature on dark background */
+    /* filter: invert(1) brightness(1.5); */ /* Example: inverts and brightens */
+    animation: fadeInScaleUp 0.8s ease-out 0.2s forwards;
+    opacity: 0; /* Start hidden for animation */
+}
+
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero-subtitle {
@@ -124,14 +145,14 @@ a:hover {
 }
 
 .hero-subtitle .hero-role {
-    color: #bb86fc; /* Accent color for the role */
+    color: #00cdd7; /* Accent color for the role */
     font-weight: 600;
 }
 
 .hero-cta-button {
     font-size: 1.1rem;
     padding: 0.8rem 2rem;
-    background-color: #bb86fc;
+    background-color: #00cdd7;
     color: #121212; /* Dark text on light button */
     border: none;
     border-radius: 5px;
@@ -141,7 +162,7 @@ a:hover {
 }
 
 .hero-cta-button:hover {
-    background-color: #a36bfc;
+    background-color: #00b4bd; /* Slightly darker blue for hover */
     color: #121212;
     transform: translateY(-3px);
 }
@@ -157,7 +178,7 @@ a:hover {
     width: 200px; /* Adjust as needed */
     height: 200px;
     object-fit: cover;
-    border: 5px solid #bb86fc; /* Accent border */
+    border: 5px solid #00cdd7; /* Accent border */
 }
 
 .about-text-content {
@@ -191,13 +212,13 @@ a:hover {
 
 .resume-button {
     padding: 0.6rem 1.2rem;
-    border-color: #bb86fc;
-    color: #bb86fc;
+    border-color: #00cdd7;
+    color: #00cdd7;
     font-weight: 500;
 }
 
 .resume-button:hover {
-    background-color: #bb86fc;
+    background-color: #00cdd7;
     color: #121212;
 }
 
@@ -218,7 +239,7 @@ a:hover {
     content: '';
     position: absolute;
     width: 3px;
-    background-color: #bb86fc;
+    background-color: #00cdd7;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -251,7 +272,7 @@ a:hover {
     height: 15px;
     right: -8.5px; /* Adjust to center on line */
     background-color: #121212;
-    border: 3px solid #bb86fc;
+    border: 3px solid #00cdd7;
     top: 25px; /* Adjust vertical position */
     border-radius: 50%;
     z-index: 1;
@@ -270,7 +291,7 @@ a:hover {
 }
 
 .timeline-content h3 {
-    color: #bb86fc;
+    color: #00cdd7;
     margin-top: 0;
 }
 
@@ -319,9 +340,9 @@ a:hover {
 }
 
 .skill-category h3 {
-    color: #bb86fc;
+    color: #00cdd7;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #bb86fc;
+    border-bottom: 2px solid #00cdd7;
     padding-bottom: 0.5rem;
     display: inline-block;
 }
@@ -366,7 +387,7 @@ a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(187, 134, 252, 0.3); /* Accent shadow on hover */
+    box-shadow: 0 8px 25px rgba(0, 205, 215, 0.3); /* Accent shadow on hover */
 }
 
 .project-image-container {
@@ -399,7 +420,7 @@ a:hover {
 
 .project-title {
     font-size: 1.5rem;
-    color: #bb86fc;
+    color: #00cdd7;
     margin-bottom: 0.5rem;
 }
 
@@ -417,7 +438,7 @@ a:hover {
 .project-tags .tag {
     display: inline-block;
     background-color: #333333;
-    color: #bb86fc;
+    color: #00cdd7;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -427,12 +448,12 @@ a:hover {
 
 .project-links .btn {
     margin-right: 0.5rem;
-    border-color: #bb86fc;
-    color: #bb86fc;
+    border-color: #00cdd7;
+    color: #00cdd7;
 }
 
 .project-links .btn:hover {
-    background-color: #bb86fc;
+    background-color: #00cdd7;
     color: #121212;
 }
 
@@ -501,7 +522,7 @@ a:hover {
 
 .contact-email-link {
     font-size: 1.5rem;
-    color: #bb86fc;
+    color: #00cdd7;
     font-weight: 500;
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -531,9 +552,31 @@ a:hover {
 .signature-image {
     max-width: 150px; /* Adjust as needed */
     height: auto;
-    filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(220deg) brightness(100%) contrast(90%); /* Example filter to match accent */
+    /* A CSS filter to change white/light parts of an image to a specific hex color like #00cdd7 is complex.
+       A simple approach for a glow image might be to make it mostly white and then use drop-shadow with the desired color.
+       Or, if the image `signature_initials_glow.png` already has a neutral glow, we might not need a filter, or just a brightness/contrast adjustment.
+       The previous filter was an attempt to colorize. A new filter for #00cdd7: This is a best guess.
+       It will highly depend on the base colors of `signature_initials_glow.png`.
+       If `signature_initials_glow.png` is mostly light/white, this might give a blue tint.
+       Consider removing filter if the image is already suitable or using an SVG for easier color manipulation. */
+    filter: brightness(0) saturate(100%) invert(83%) sepia(20%) saturate(4748%) hue-rotate(138deg) brightness(104%) contrast(103%);
 }
 
+/* Cursor animation styles */
+.cursor-animation {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    color: #00cdd7; /* Match accent color */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 
 /* ==========================================================================
    Footer

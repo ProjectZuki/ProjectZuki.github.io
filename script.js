@@ -57,57 +57,109 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealElements = document.querySelectorAll('.timeline-item, .skill-category, .project-card, .gallery-item');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => { // Added index here
             if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-                // entry.target.classList.add('visible'); // Or add a class to trigger CSS animation
+                // Apply a delay based on the index for staggering, only for specific parent containers
+                let delay = 0;
+                const parentSkillsGrid = entry.target.closest('.skills-grid');
+                const parentProjectsRow = entry.target.closest('.projects-section .row');
+                const parentGalleryGrid = entry.target.closest('.gallery-grid');
+
+                if (parentSkillsGrid && entry.target.classList.contains('skill-category')) {
+                    const items = Array.from(parentSkillsGrid.querySelectorAll('.skill-category'));
+                    delay = items.indexOf(entry.target) * 150; // 150ms stagger
+                } else if (parentProjectsRow && entry.target.classList.contains('project-card')) {
+                    const items = Array.from(parentProjectsRow.querySelectorAll('.project-card'));
+                    delay = items.indexOf(entry.target) * 150; // 150ms stagger
+                } else if (parentGalleryGrid && entry.target.classList.contains('gallery-item')) {
+                    const items = Array.from(parentGalleryGrid.querySelectorAll('.gallery-item'));
+                    delay = items.indexOf(entry.target) * 100; // 100ms stagger for gallery
+                }
+                // For timeline items, no parent-based stagger, they appear as they intersect.
+
+                setTimeout(() => {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }, delay);
+
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }); // Trigger a bit before it's fully in view
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
     revealElements.forEach(el => {
-        // Initial state for animation (set via JS for elements that might not have CSS initial state)
         el.style.opacity = "0";
         el.style.transform = "translateY(20px)";
         el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+        // Transition delay will be handled by the setTimeout in the observer callback
         revealObserver.observe(el);
     });
 
 
-    // ------------------------ Old Typing Animations (To be reviewed/repurposed) ------------------------ //
-    // The old script had typing animations for section titles.
-    // This might not fit the new design, which has static titles.
-    // If typing animations are desired for specific elements (e.g., the hero role), they can be adapted.
+    // ------------------------ Typing Animations for Section Titles ------------------------ //
 
-    /*
-    const TITLE_TYPING_SPEED = 25;
-    const SECONDARY_TITLE_TYPING_SPEED = 50;
+    const TYPING_SPEED = 50; // Adjusted speed
 
-    function animateTitleText(text, spanElement, cursorElement, index, typeSpeed, callback) {
-        if (index < text.length) {
-            spanElement.textContent += text[index];
-            index++;
-            setTimeout(() => {
-                animateTitleText(text, spanElement, cursorElement, index, typeSpeed, callback);
-            }, typeSpeed - 20);
+    function animateTitleText(text, textElement, cursorElement, callback) {
+        let index = 0;
+        textElement.textContent = ''; // Clear existing text
+        if(cursorElement) cursorElement.style.display = 'inline'; // Ensure cursor is visible
+
+        function type() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, TYPING_SPEED);
+            } else {
+                if (cursorElement) {
+                    // Keep cursor blinking, don't hide it
+                    // cursorElement.style.display = 'none';
+                }
+                if (callback) callback();
+            }
+        }
+        type();
+    }
+
+    function setupTitleAnimation(containerId, textSpanId, fullText) {
+        const titleContainer = document.getElementById(containerId);
+        const textElement = document.getElementById(textSpanId);
+        // Assumes cursor is the next sibling span with class .cursor-animation
+        const cursorElement = textElement ? textElement.nextElementSibling : null;
+
+        if (titleContainer && textElement && cursorElement) {
+            const titleObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Ensure text is cleared before starting animation
+                        textElement.textContent = '';
+                        // Delay slightly before starting
+                        setTimeout(() => {
+                            animateTitleText(fullText, textElement, cursorElement, () => {
+                                // Optional: any action after typing is complete
+                            });
+                        }, 300); // Short delay
+                        titleObserver.unobserve(entry.target); // Animate only once
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% visible
+
+            titleObserver.observe(titleContainer);
         } else {
-            if (cursorElement) cursorElement.style.display = 'none'; // Hide cursor after typing
-            if (callback) callback();
+            if (!titleContainer) console.error("Missing container:", containerId);
+            if (!textElement) console.error("Missing text span:", textSpanId);
+            if (!cursorElement) console.error("Missing cursor span for:", textSpanId);
         }
     }
 
-    // Example of how it might be repurposed for the hero role:
-    const heroRoleElement = document.querySelector(".hero-role");
-    if (heroRoleElement) {
-        const originalText = heroRoleElement.textContent;
-        heroRoleElement.textContent = ""; // Clear it
-        // Create a cursor element if needed, or manage visibility of an existing one.
-        // For simplicity, this example won't use a visible cursor during typing.
-        // animateTitleText(originalText, heroRoleElement, null, 0, SECONDARY_TITLE_TYPING_SPEED, null);
-    }
-    */
+    // Setup for each title
+    // Note: The section renaming ("My Journey" to "Timeline", "Let's Connect!" to "Contact Me")
+    // will be handled in the next plan step. The JS will use the new names here.
+    setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
+    setupTitleAnimation("skills-title-container", "skills-title-text", "Skills");
+    setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");
+    setupTitleAnimation("gallery-title-container", "gallery-title-text", "Gallery");
+    setupTitleAnimation("contact-title-container", "contact-title-text", "Contact Me");
 
     // ------------------------ Old Image Gallery Animation (To be reviewed/repurposed) ------------------------ //
     // The previous image gallery had a specific slide-in animation.
