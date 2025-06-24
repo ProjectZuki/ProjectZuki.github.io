@@ -98,47 +98,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ------------------------ Typing Animations for Section Titles ------------------------ //
 
-    const TYPING_SPEED = 50; // Adjusted speed
+    const TYPING_SPEED = 75; // Adjusted speed, slightly slower
 
-    function animateTitleText(text, textElement, cursorElement, callback) {
-        let index = 0;
-        textElement.textContent = ''; // Clear existing text
-        if(cursorElement) cursorElement.style.display = 'inline'; // Ensure cursor is visible
+    // Recursive function for typing animation
+    function animateTitleTextRecursive(text, textElement, cursorElement, currentIndex, speed, callback) {
+        if (cursorElement) cursorElement.style.display = 'inline'; // Ensure cursor is visible during animation
 
-        function type() {
-            if (index < text.length) {
-                textElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, TYPING_SPEED);
-            } else {
-                if (cursorElement) {
-                    // Keep cursor blinking, don't hide it
-                    // cursorElement.style.display = 'none';
-                }
-                if (callback) callback();
-            }
+        if (currentIndex < text.length) {
+            textElement.textContent += text.charAt(currentIndex);
+            setTimeout(() => {
+                animateTitleTextRecursive(text, textElement, cursorElement, currentIndex + 1, speed, callback);
+            }, speed);
+        } else {
+            // Animation complete
+            // Optional: keep cursor blinking or hide it. Currently, CSS handles blinking.
+            // if (cursorElement) cursorElement.style.display = 'none';
+            if (callback) callback();
         }
-        type();
     }
 
     function setupTitleAnimation(containerId, textSpanId, fullText) {
         const titleContainer = document.getElementById(containerId);
         const textElement = document.getElementById(textSpanId);
-        // Assumes cursor is the next sibling span with class .cursor-animation
         const cursorElement = textElement ? textElement.nextElementSibling : null;
 
         if (titleContainer && textElement && cursorElement) {
             const titleObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Ensure text is cleared before starting animation
-                        textElement.textContent = '';
-                        // Delay slightly before starting
+                        // Delay slightly before starting animation
                         setTimeout(() => {
-                            animateTitleText(fullText, textElement, cursorElement, () => {
+                            textElement.textContent = ''; // Clear text just before starting
+                            animateTitleTextRecursive(fullText, textElement, cursorElement, 0, TYPING_SPEED, () => {
                                 // Optional: any action after typing is complete
                             });
-                        }, 300); // Short delay
+                        }, 300); // Short delay to ensure element is fully settled in view
                         titleObserver.unobserve(entry.target); // Animate only once
                     }
                 });
