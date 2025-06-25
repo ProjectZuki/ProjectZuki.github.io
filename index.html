@@ -53,6 +53,7 @@
                 <div class="hero-nav-buttons mt-4">
                     <!-- <a href="#about" class="btn btn-outline-light hero-nav-button mx-2 my-2">About Me</a> -->
                     <a href="#journey" class="btn btn-outline-light hero-nav-button mx-2 my-2">Timeline</a>
+                    <!-- TODO: Add section for skills -->
                     <a href="#projects" class="btn btn-outline-light hero-nav-button mx-2 my-2">Projects</a>
                     <a href="#contact" class="btn btn-outline-light hero-nav-button mx-2 my-2">Contact</a>
                 </div>
@@ -84,7 +85,8 @@
                         <p class="about-text-content">
                             <strong>Software Engineer</strong> at a Las Vegas gaming startup, building immersive and user-focused gameplay experiences.
                             <br><br>
-                            Graduated from the <span class="text-unlv">University of Nevada Las Vegas</span> with a B.S. in Computer Science, focusing on software engineering, algorithms, and data structures.
+
+                            <strong>Graduate</strong> from the <span class="text-unlv">University of Nevada Las Vegas</span> with a B.S. in Computer Science, focusing on software engineering, algorithms, and data structures.
                             <br><br>
                             Former <strong>Academic Tutor</strong> at the <span class="text-csn">College of Southern Nevada</span>, helping hundreds of students master core computer science principles.
                             <br><br> 
@@ -165,7 +167,6 @@
                             <li><img src="images/skills_icons/java.svg" alt="Java" class="skill-icon"> Java</li>
                             <li><img src="images/skills_icons/javascript.svg" alt="JavaScript" class="skill-icon"> JavaScript</li>
                             <li><img src="images/skills_icons/bootstrap.svg" alt="Bootstrap" class="skill-icon"> Bootstrap</li>
-                            <!-- Add more backend skills as needed -->
                         </ul>
                     </div>
                     <div class="skill-category">
@@ -178,17 +179,16 @@
                             <li><img src="images/skills_icons/docker.svg" alt="Docker" class="skill-icon"> Docker</li>
                             <li><img src="images/skills_icons/mysql.svg" alt="MySQL" class="skill-icon"> MySQL</li>
                             <li><img src="images/skills_icons/ros.svg" alt="ROS" class="skill-icon"> ROS</li>
-                            <!-- Add more tools/databases as needed -->
+                            <!-- TODO: Add AI-Tools chatGPT, OpenAI API, Codex, CoPilot -->
                         </ul>
                     </div>
                      <div class="skill-category">
-                        <h3>Other</h3>
+                         <h3>Other</h3>
                         <ul>
                             <li><img src="images/skills_icons/embedded_c.svg" alt="Embedded C/C++" class="skill-icon"> Embedded C/C++</li>
                             <li><img src="images/skills_icons/arduino.svg" alt="Arduino" class="skill-icon"> Arduino</li>
                             <li><img src="images/skills_icons/linux.svg" alt="Linux" class="skill-icon"> Linux</li>
                             <li><img src="images/skills_icons/tensorflow.svg" alt="TensorFlow" class="skill-icon"> TensorFlow</li>
-                           <!-- Add more other skills -->
                         </ul>
                     </div>
                 </div>
@@ -207,9 +207,12 @@
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="project-card">
                             <div class="project-image-container">
-                                <video autoplay loop muted playsinline class="project-image" loading="lazy">
+                                <!-- <video autoplay loop muted playsinline class="project-image" loading="lazy">
                                     <source src="images/ProjectImages/LEDModule0.mp4" type="video/mp4">
-                                </video>
+                                </video> -->
+                                <div class="project-image-container">
+                                <img src="images/ProjectImages/LEDModule1.jpg" alt="Drumbots LED Drumline Las Vegas" class="project-image">
+                            </div>
                             </div>
                             <div class="project-card-body">
                                 <h3 class="project-title">LED Control Module</h3>
@@ -217,7 +220,7 @@
                                     Custom drum trigger LED module for Drumbots, enhancing performances with dynamic, real-time lighting effects.
                                 </p>
                                 <div class="project-tags">
-                                    <span class="tag">C++</span><span class="tag">Arduino</span><span class="tag">Embedded Systems</span>
+                                    <span class="tag">C++</span><span class="tag">Arduino</span><span class="tag">Embedded Systems</span><span class="tag">Microcontrollers</span><span class="tag">
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/ProjectZuki/led-control-module" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
@@ -232,16 +235,16 @@
                         <div class="project-card">
                            <div class="project-image-container">
                                 <video autoplay loop muted playsinline class="project-image" loading="lazy">
-                                    <source src="images/ProjectImages/F1Tenth0.mp4" type="video/mp4">
+                                    <source src="images/ProjectImages/F1Tenth1.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="project-card-body">
                                 <h3 class="project-title">F1tenth Autonomous Racing</h3>
                                 <p class="project-description">
-                                    Developed autonomous vehicle navigation using ROS, SLAM, and Deep Learning for high-speed racing.
+                                    Developed autonomous vehicle navigation using ROS, Simultaneous Localization and Mapping, and Real Time Systems.
                                 </p>
                                 <div class="project-tags">
-                                    <span class="tag">Python</span><span class="tag">C++</span><span class="tag">ROS</span><span class="tag">SLAM</span><span class="tag">AI</span>
+                                    <span class="tag">Python</span><span class="tag">C++</span><span class="tag">ROS</span><span class="tag">SLAM</span><span class="tag">RTS</span>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/ProjectZuki/GalacticRacing" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
@@ -255,7 +258,7 @@
                         <div class="project-card">
                             <div class="project-image-container">
                                 <!-- Placeholder or actual image for portfolio -->
-                                <img src="images/self_image.jpeg" alt="Personal Webpage" class="project-image">
+                                <img src="images/code_background.png" alt="Personal Webpage" class="project-image" style="filter: blur(3px);">
                             </div>
                             <div class="project-card-body">
                                 <h3 class="project-title">Personal Portfolio Website</h3>
@@ -267,7 +270,6 @@
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/ProjectZuki/ProjectZuki.github.io" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
-                                    <a href="https://williealcaraz.dev" class="btn btn-outline-light btn-sm" target="_blank">Live Demo</a>
                                 </div>
                             </div>
                         </div>
@@ -278,12 +280,12 @@
                         <div class="project-card">
                             <div class="project-image-container">
                                 <!-- Placeholder for CNN project - replace with actual image/video if available -->
-                                <img src="images/skills_icons/tensorflow_color.svg" alt="CNN Seizure Prediction" class="project-image placeholder-icon">
+                                <img src="images/ProjectImages/eeg.png" alt="CNN Seizure Prediction" class="project-image placeholder-icon">
                             </div>
                             <div class="project-card-body">
-                                <h3 class="project-title">CNN Seizure Prediction</h3>
+                                <h3 class="project-title">Neural Network Seizure Prediction</h3>
                                 <p class="project-description">
-                                    Developed a CNN model for seizure prediction using EEG data and spectrograms, applying ML in healthcare.
+                                    Developed a Neural Network model for seizure prediction using EEG data and spectrograms, applying ML in healthcare.
                                 </p>
                                 <div class="project-tags">
                                     <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Machine Learning</span>
@@ -353,7 +355,7 @@
 
         <footer class="footer text-center py-4">
              <!-- <p class="quote-einstein mb-3">"Anyone who has never made a mistake has never tried anything new." - <i>Albert Einstein</i></p> -->
-            <p class="copyright-text">&copy; 2025 Willie Alcaraz | [Project] Zuki</p>
+            <p class="copyright-text">&copy; 2025 Willie Alcaraz | [Project]Zuki</p>
         </footer>
     </div>
 

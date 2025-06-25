@@ -16,7 +16,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif; /* Example: Using Arial, can be changed */
     background-color: var(--secondary-color); /* Dark background */
-    color: var(--text-color); /* Light text color for contrast */
+    color: #e0e0e0; /* Light text color for contrast */
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -144,7 +144,7 @@ a:hover {
 
 .hero-subtitle {
     font-size: 2.2rem;
-    color: var(--text-color);
+    color: #e0e0e0;
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -350,7 +350,7 @@ a:hover {
     position: relative;
     border-radius: 15px; /* Increased for consistency */
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    border: 1px solid var(--border-color); /* Same sleek border as project cards */
+    border: 1px solid #383838; /* Same sleek border as project cards */
     transition: box-shadow 0.3s ease; /* Add transition for potential hover effect */
 }
 
@@ -458,7 +458,7 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Removed border-color from transition */
     height: 100%; /* Ensure cards in a row have same height */
-    border: 1px solid var(--border-color); /* Lighter, more subtle border */
+    border: 1px solid #383838; /* Lighter, more subtle border */
 }
 
 .project-card:hover {
@@ -600,7 +600,7 @@ a:hover {
    ========================================================================== */
 .contact-section {
     background: linear-gradient(135deg, #1f1f1f, var(--secondary-color));
-    color: var(--text-color);
+    color: #e0e0e0;
 }
 
 .contact-section .section-title {
