@@ -295,7 +295,7 @@ a:hover {
     position: absolute;
     width: 15px;   /* Total diameter of the circle element */
     height: 15px;
-    background-color: #121212; /* THIS IS THE FILL COLOR - should match page/section bg */
+    background-color: #00cdd7; /* THIS IS THE FILL COLOR - should match page/section bg */
     border: 3px solid #00cdd7; /* Accent color border */
     top: 25px;
     border-radius: 50%;
