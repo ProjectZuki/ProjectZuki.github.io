@@ -54,23 +54,50 @@ document.addEventListener("DOMContentLoaded", () => {
     // Re-implement or adapt previous Intersection Observer animations if they fit the new design.
     // Example: Fade-in elements as they scroll into view.
 
-    const revealElements = document.querySelectorAll('.timeline-item, .skill-category, .project-card, .gallery-item');
+    const revealElements = document.querySelectorAll('.timeline-item, .skill-category-row, .project-card, .gallery-item'); // Updated .skills-column to .skill-category-row
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => { // Added index here
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Apply a delay based on the index for staggering, only for specific parent containers
                 let delay = 0;
-                const parentSkillsGrid = entry.target.closest('.skills-grid');
+                // Staggering logic for project cards and gallery items remains.
+                // For skill-category-row, they will appear one by one based on intersection,
+                // so complex parent-based staggering might not be necessary unless many rows are visible at once.
+                // We can apply a simple reveal or a slight stagger if needed.
+                // For now, let's apply the reveal without specific staggering for skills rows,
+                // but keep the staggering for projects and gallery.
+
                 const parentProjectsRow = entry.target.closest('.projects-section .row');
                 const parentGalleryGrid = entry.target.closest('.gallery-grid');
 
-                if (parentSkillsGrid && entry.target.classList.contains('skill-category')) {
-                    const items = Array.from(parentSkillsGrid.querySelectorAll('.skill-category'));
-                    delay = items.indexOf(entry.target) * 150; // 150ms stagger
-                } else if (parentProjectsRow && entry.target.classList.contains('project-card')) {
+                // Stagger project cards
+                if (parentProjectsRow && entry.target.classList.contains('project-card')) {
                     const items = Array.from(parentProjectsRow.querySelectorAll('.project-card'));
-                    delay = items.indexOf(entry.target) * 150; // 150ms stagger
+                    delay = items.indexOf(entry.target) * 150;
+                // Stagger gallery items
+                } else if (parentGalleryGrid && entry.target.classList.contains('gallery-item')) {
+                    const items = Array.from(parentGalleryGrid.querySelectorAll('.gallery-item'));
+                    delay = items.indexOf(entry.target) * 100;
+                // Note: Staggering for .skill-category-row (if many are visible simultaneously) could be added here.
+                // For now, each row gets animated as it comes into view without inter-row staggering.
+                }
+
+                setTimeout(() => {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }, delay);
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    revealElements.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+        revealObserver.observe(el);
+    });
                 } else if (parentGalleryGrid && entry.target.classList.contains('gallery-item')) {
                     const items = Array.from(parentGalleryGrid.querySelectorAll('.gallery-item'));
                     delay = items.indexOf(entry.target) * 100; // 100ms stagger for gallery
