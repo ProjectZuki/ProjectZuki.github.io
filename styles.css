@@ -226,13 +226,12 @@ a:hover {
 .social-links-about .social-icon {
     width: 30px;
     height: 30px;
+    /* filter: grayscale(100%) brightness(150%); */ /* Removed old filter */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-links-about .social-icon:hover {
-    /* Filter to convert to #00cdd7 blue accent color */
-    /* This specific filter is a generator's best guess for #00cdd7. May need fine-tuning. */
-    filter: brightness(0) saturate(100%) invert(69%) sepia(98%) saturate(1308%) hue-rotate(135deg) brightness(94%) contrast(101%);
+    filter: none; /* Remove .filter-to-white on hover to show original color */
     transform: scale(1.1);
 }
 
@@ -391,78 +390,48 @@ a:hover {
    ========================================================================== */
 .skills-section {
     background-color: #1e1e1e;
-    /* Inspired by example: class="bg-black text-white py-20 px-6 relative overflow-hidden" */
-    /* We already have py-5 from the section. bg-black is similar to our #121212 or #1e1e1e */
-    /* overflow: hidden; /* Could be added if animations require it */
 }
 
-.skills-list-container {
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.skill-category h3 {
+    color: #00cdd7;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00cdd7;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category ul li {
     display: flex;
-    flex-direction: column; /* Stack category rows vertically */
-    gap: 1.5rem; /* Space between category rows */
-    max-width: 800px; /* Constrain width for better readability */
-    margin: 0 auto; /* Center the container */
-}
-
-.skill-category-row {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    padding: 1rem 0;
-    border-bottom: 1px solid #333; /* Subtle separator line */
-}
-
-.skill-category-row:last-child {
-    border-bottom: none; /* No border for the last item */
-}
-
-.skill-category-label {
-    flex: 0 0 200px; /* Fixed width for the label column */
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #00cdd7; /* Accent color for the label */
-    padding-right: 1rem; /* Space between label and items */
-    text-align: right; /* Align label text to the right, towards the items */
-}
-
-.skill-items {
-    flex: 1; /* Takes remaining space */
-    display: flex;
-    flex-wrap: wrap; /* Allow skill items to wrap if needed */
-    gap: 0.8rem 1.5rem; /* Vertical and horizontal gap between skill items */
-    line-height: 1.8; /* Improve readability if items wrap */
-}
-
-.skill-items span {
+    align-items: center;
+    margin-bottom: 0.8rem;
     font-size: 1rem;
     color: #c0c0c0;
-    background-color: #2a2a2a; /* Subtle background for each skill item */
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.skill-items span:hover {
-    background-color: #00cdd7; /* Accent color background on hover */
-    color: #121212; /* Dark text on hover */
+.skill-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 10px;
+    /* Assuming SVGs are used and can be colored with fill or filter */
 }
-
-/* Responsive adjustments for Skills section */
-@media (max-width: 768px) {
-    .skill-category-row {
-        flex-direction: column; /* Stack label on top of items */
-        align-items: flex-start; /* Align all to start */
-    }
-    .skill-category-label {
-        width: auto; /* Allow label to take full width */
-        text-align: left; /* Align label text to the left */
-        margin-bottom: 0.5rem; /* Space between label and items */
-        font-size: 1.1rem;
-    }
-    .skill-items {
-        gap: 0.5rem 1rem; /* Adjust gap for smaller screens */
-    }
-}
-
 
 /* ==========================================================================
    Projects Section
@@ -647,12 +616,12 @@ a:hover {
 .social-links-contact .social-icon {
     width: 35px; /* Slightly larger for contact section */
     height: 35px;
+    /* filter: grayscale(100%) brightness(150%); */ /* Removed old filter */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-links-contact .social-icon:hover {
-    /* Filter to convert to #00cdd7 blue accent color */
-    filter: brightness(0) saturate(100%) invert(69%) sepia(98%) saturate(1308%) hue-rotate(135deg) brightness(94%) contrast(101%);
+    filter: none; /* Remove .filter-to-white on hover to show original color */
     transform: scale(1.15);
 }
 
