@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function setupTitleAnimation(containerId, textSpanId, fullText) {
+    function setupTitleAnimation(containerId, textSpanId, fullText, color) {
         const titleContainer = document.getElementById(containerId);
         const textElement = document.getElementById(textSpanId);
         const cursorElement = textElement ? textElement.nextElementSibling : null;
@@ -126,17 +126,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const titleObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Delay slightly before starting animation
                         setTimeout(() => {
                             textElement.textContent = ''; // Clear text just before starting
+                            if (color) {
+                                textElement.style.color = color;
+                            }
                             animateTitleTextRecursive(fullText, textElement, cursorElement, 0, TYPING_SPEED, () => {
                                 // Optional: any action after typing is complete
                             });
-                        }, 300); // Short delay to ensure element is fully settled in view
-                        titleObserver.unobserve(entry.target); // Animate only once
+                        }, 500); // set delay in ms
+                        titleObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.5 }); // Trigger when 50% visible
+            }, { threshold: 0.5 });
 
             titleObserver.observe(titleContainer);
         } else {
@@ -151,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // will be handled in the next plan step. The JS will use the new names here.
 
     // Typing animation for "Willie Alcaraz" in About Me section
+    setupTitleAnimation("software-engineer-title-container", "software-engineer-text", "Software Engineer", "#00cdd7");
     setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");

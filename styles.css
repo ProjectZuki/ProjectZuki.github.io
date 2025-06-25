@@ -215,9 +215,9 @@ a:hover {
     color: #ffffff;
 }
 
-.about-text-content .text-unlv { color: #e8c8a7; } /* Example color */
-.about-text-content .text-csn { color: #a7c8e8; } /* Example color */
-.about-text-content .text-vgk { color: #b4975a; } /* Example color */
+.about-text-content .text-unlv { color: #B10202; } /* Example color */
+.about-text-content .text-csn { color: #004990; } /* Example color */
+.about-text-content .text-vgk { color: #B4975A; } /* Example color */
 
 .social-links-about .social-icon-link {
     margin-right: 15px;
@@ -295,7 +295,7 @@ a:hover {
     position: absolute;
     width: 15px;   /* Total diameter of the circle element */
     height: 15px;
-    background-color: #121212; /* THIS IS THE FILL COLOR - should match page/section bg */
+    background-color: #00cdd7; /* THIS IS THE FILL COLOR - should match page/section bg */
     border: 3px solid #00cdd7; /* Accent color border */
     top: 25px;
     border-radius: 50%;
@@ -640,6 +640,11 @@ a:hover {
     opacity: 1;
     animation: blink 0.7s infinite;
     color: #00cdd7; /* Match accent color */
+}
+.cursor1-animation {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    color: white; /* Match accent color */
 }
 
 @keyframes blink {
