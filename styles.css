@@ -1,11 +1,22 @@
 /* ==========================================================================
+   Global variables
+   ========================================================================== */
+:root {
+    --accent-color: #00cdd7; /* Accent color */
+    --secondary-color: #121212; /* Dark background */
+    --text-color: #e0e0e0; /* Light text color */
+    --border-color: #383838; /* Subtle border color */
+    --hover-color: #00b4bd; /* Slightly darker blue for hover effects */
+}
+
+/* ==========================================================================
    Base Styles
    ========================================================================== */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif; /* Example: Using Arial, can be changed */
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color for contrast */
+    background-color: var(--secondary-color); /* Dark background */
+    color: var(--text-color); /* Light text color for contrast */
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -20,7 +31,7 @@ html {
 }
 
 a {
-    color: #00cdd7; /* Accent color for links */
+    color: var(--accent-color); /* Accent color for links */
     text-decoration: none;
 }
 
@@ -97,7 +108,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1f1f1f, #121212); /* Subtle gradient */
+    background: linear-gradient(135deg, #1f1f1f, var(--secondary-color)); /* Subtle gradient */
     padding: 2rem;
     text-align: center;
 }
@@ -105,7 +116,7 @@ a:hover {
 .hero-content .name-title {
     font-size: 1.8rem; /* Smaller, letter-spaced title */
     letter-spacing: 0.3em;
-    color: #00cdd7; /* Accent color */
+    color: var(--accent-color); /* Accent color */
     margin-bottom: 1rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -115,7 +126,7 @@ a:hover {
     max-width: 300px; /* Adjust as needed */
     height: auto;
     margin-bottom: 1.5rem;
-    animation: fadeInScaleUp 0.8s ease-out 0.2s forwards;
+    animation: fadeInScaleUp 0.5s ease-out 0.2s forwards;
     opacity: 0; /* Start hidden for animation */
     /* filter attribute will be applied by .filter-to-white if class is present in HTML */
 }
@@ -133,7 +144,7 @@ a:hover {
 
 .hero-subtitle {
     font-size: 2.2rem;
-    color: #e0e0e0;
+    color: var(--text-color);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -144,15 +155,15 @@ a:hover {
 }
 
 .hero-subtitle .hero-role {
-    color: #00cdd7; /* Accent color for the role */
+    color: var(--accent-color); /* Accent color for the role */
     font-weight: 600;
 }
 
 .hero-cta-button {
     font-size: 1.1rem;
     padding: 0.8rem 2rem;
-    background-color: #00cdd7;
-    color: #121212; /* Dark text on light button */
+    background-color: var(--accent-color);
+    color: var(--secondary-color); /* Dark text on light button */
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -162,7 +173,7 @@ a:hover {
 
 .hero-cta-button:hover {
     background-color: #00b4bd; /* Slightly darker blue for hover */
-    color: #121212;
+    color: var(--secondary-color);
     transform: translateY(-3px);
 }
 
@@ -177,8 +188,8 @@ a:hover {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
     background-color: transparent;
-    color: #00cdd7; /* Accent color for text */
-    border: 1px solid #00cdd7; /* Accent color border */
+    color: var(--accent-color); /* Accent color for text */
+    border: 1px solid var(--accent-color); /* Accent color border */
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: 500;
@@ -186,8 +197,8 @@ a:hover {
 }
 
 .hero-nav-button:hover {
-    background-color: #00cdd7;
-    color: #121212; /* Dark text on hover */
+    background-color: var(--accent-color);
+    color: var(--secondary-color); /* Dark text on hover */
     transform: translateY(-2px);
 }
 
@@ -203,7 +214,7 @@ a:hover {
     width: 200px; /* Adjust as needed */
     height: 200px;
     object-fit: cover;
-    border: 5px solid #00cdd7; /* Accent border */
+    border: 5px solid var(--accent-color); /* Accent border */
 }
 
 .about-text-content {
@@ -237,21 +248,21 @@ a:hover {
 
 .resume-button {
     padding: 0.6rem 1.2rem;
-    border-color: #00cdd7;
-    color: #00cdd7;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     font-weight: 500;
 }
 
 .resume-button:hover {
-    background-color: #00cdd7;
-    color: #121212;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* ==========================================================================
    My Journey Section (Timeline)
    ========================================================================== */
 .journey-section {
-    background-color: #121212;
+    background-color: var(--secondary-color);
 }
 
 .timeline {
@@ -264,7 +275,7 @@ a:hover {
     content: '';
     position: absolute;
     width: 3px;
-    background-color: #00cdd7;
+    background-color: var(--accent-color);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -295,8 +306,8 @@ a:hover {
     position: absolute;
     width: 15px;   /* Total diameter of the circle element */
     height: 15px;
-    background-color: #00cdd7; /* THIS IS THE FILL COLOR - should match page/section bg */
-    border: 3px solid #00cdd7; /* Accent color border */
+    background-color: var(--accent-color); /* THIS IS THE FILL COLOR - should match page/section bg */
+    border: 3px solid var(--accent-color); /* Accent color border */
     top: 25px;
     border-radius: 50%;
     z-index: 1; /* Ensure circle is above the timeline line */
@@ -339,7 +350,7 @@ a:hover {
     position: relative;
     border-radius: 15px; /* Increased for consistency */
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    border: 1px solid #383838; /* Same sleek border as project cards */
+    border: 1px solid var(--border-color); /* Same sleek border as project cards */
     transition: box-shadow 0.3s ease; /* Add transition for potential hover effect */
 }
 
@@ -348,7 +359,7 @@ a:hover {
 }
 
 .timeline-content h3 {
-    color: #00cdd7;
+    color: var(--accent-color);
     margin-top: 0;
 }
 
@@ -406,9 +417,9 @@ a:hover {
 }
 
 .skill-category h3 {
-    color: #00cdd7;
+    color: var(--accent-color);
     margin-bottom: 1rem;
-    border-bottom: 2px solid #00cdd7;
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
     display: inline-block;
 }
@@ -437,7 +448,7 @@ a:hover {
    Projects Section
    ========================================================================== */
 .projects-section {
-    background-color: #121212;
+    background-color: var(--secondary-color);
 }
 
 .project-card {
@@ -447,13 +458,13 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Removed border-color from transition */
     height: 100%; /* Ensure cards in a row have same height */
-    border: 1px solid #383838; /* Lighter, more subtle border */
+    border: 1px solid var(--border-color); /* Lighter, more subtle border */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 205, 215, 0.3); /* Accent shadow on hover */
-    /* border-color: #00cdd7; */ /* Removed accent color border on hover to keep it sleek */
+    /* border-color: var(--accent-color); */ /* Removed accent color border on hover to keep it sleek */
 }
 
 .project-image-container {
@@ -496,7 +507,7 @@ a:hover {
 
 .project-title {
     font-size: 1.5rem;
-    color: #00cdd7;
+    color: var(--accent-color);
     margin-bottom: 0.5rem;
 }
 
@@ -514,7 +525,7 @@ a:hover {
 .project-tags .tag {
     display: inline-block;
     background-color: #333333;
-    color: #00cdd7;
+    color: var(--accent-color);
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -524,13 +535,13 @@ a:hover {
 
 .project-links .btn {
     margin-right: 0.5rem;
-    border-color: #00cdd7;
-    color: #00cdd7;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .project-links .btn:hover {
-    background-color: #00cdd7;
-    color: #121212;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* ==========================================================================
@@ -588,8 +599,8 @@ a:hover {
    Contact Section
    ========================================================================== */
 .contact-section {
-    background: linear-gradient(135deg, #1f1f1f, #121212);
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #1f1f1f, var(--secondary-color));
+    color: var(--text-color);
 }
 
 .contact-section .section-title {
@@ -598,7 +609,7 @@ a:hover {
 
 .contact-email-link {
     font-size: 1.5rem;
-    color: #00cdd7;
+    color: var(--accent-color);
     font-weight: 500;
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -639,7 +650,7 @@ a:hover {
 .cursor-animation {
     opacity: 1;
     animation: blink 0.7s infinite;
-    color: #00cdd7; /* Match accent color */
+    color: var(--accent-color); /* Match accent color */
 }
 .cursor1-animation {
     opacity: 1;

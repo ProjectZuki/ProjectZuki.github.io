@@ -9,6 +9,9 @@
  * @date Current Date
  */
 
+// Global variables for colors
+const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // ------------------------ Smooth Scrolling for Navigation ------------------------ //
@@ -153,11 +156,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // will be handled in the next plan step. The JS will use the new names here.
 
     // Typing animation for "Willie Alcaraz" in About Me section
-    setupTitleAnimation("software-engineer-title-container", "software-engineer-text", "Software Engineer", "#00cdd7");
+    setupTitleAnimation("software-engineer-title-container", "software-engineer-text", "Software Engineer", accentColor);
     setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
-    setupTitleAnimation("skills-title-container", "skills-title-text", "Skills");
+    setupTitleAnimation("skills-title-container", "skills-title-text", "Tech Stack");
     setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");
     setupTitleAnimation("gallery-title-container", "gallery-title-text", "Gallery");
     setupTitleAnimation("contact-title-container", "contact-title-text", "Contact Me");
