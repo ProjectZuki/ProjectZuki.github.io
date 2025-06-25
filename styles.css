@@ -311,8 +311,14 @@ a:hover {
     padding: 20px 30px;
     background-color: #1e1e1e;
     position: relative;
-    border-radius: 6px;
+    border-radius: 15px; /* Increased for consistency */
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    border: 1px solid #383838; /* Same sleek border as project cards */
+    transition: box-shadow 0.3s ease; /* Add transition for potential hover effect */
+}
+
+.timeline-content:hover {
+    box-shadow: 0 5px 15px rgba(0, 205, 215, 0.2); /* Subtle accent shadow on hover */
 }
 
 .timeline-content h3 {
