@@ -268,44 +268,70 @@ a:hover {
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -1.5px;
+    margin-left: -1.5px; /* Center the 3px line */
 }
 
 .timeline-item {
     padding: 10px 40px;
     position: relative;
-    background-color: inherit;
+    background-color: inherit; /* Should be transparent or match .journey-section */
     width: 50%;
 }
 
 .timeline-item:nth-child(odd) {
     left: 0;
-    padding-left: 20px; /* Adjust padding */
-    padding-right: 50px; /* Adjust padding */
+    padding-left: 20px;
+    padding-right: 50px;
 }
 
 .timeline-item:nth-child(even) {
     left: 50%;
-    padding-left: 50px; /* Adjust padding */
-    padding-right: 20px; /* Adjust padding */
+    padding-left: 50px;
+    padding-right: 20px;
 }
 
 .timeline-item::after { /* The circles on the timeline */
     content: '';
     position: absolute;
-    width: 15px;
+    width: 15px;   /* Total diameter of the circle element */
     height: 15px;
-    right: -8.5px; /* Adjust to center on line */
-    background-color: #121212;
-    border: 3px solid #00cdd7;
-    top: 25px; /* Adjust vertical position */
+    background-color: #121212; /* THIS IS THE FILL COLOR - should match page/section bg */
+    border: 3px solid #00cdd7; /* Accent color border */
+    top: 25px;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 1; /* Ensure circle is above the timeline line */
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -9px; /* (Item padding-right 50px) - (timeline width 700px / 2 = 350px item width) ... this needs to be relative to line.
+                      Line is at 50% of .timeline. Item edge is at 50% of .timeline.
+                      So, to center a 15px circle (whose edge is used for positioning) over the line:
+                      Its own center is 7.5px from its edge.
+                      We want its center at the 50% mark. So edge is at 50% - 7.5px.
+                      Position from right edge of item: -7.5px centers it.
+                      The 3px border effectively makes the line 3px wide.
+                      The circle's total width is 15px. Half of that is 7.5px.
+                      The line is 3px wide. Half of that is 1.5px.
+                      If line is at left:50%, margin-left:-1.5px, its center is exactly at 50%.
+                      For odd items (left side), item's right edge is at 50%.
+                      Circle's 'right' property positions its right outer edge.
+                      We want circle's center at 50%. Circle outer radius is 7.5px.
+                      So, right edge of circle should be 7.5px to the right of the 50% line.
+                      right: -7.5px; (This means 7.5px from the right edge of the item, pushing its center to align with the item's right edge, which is the 50% line)
+                   */
+    right: -7.5px;
 }
 
 .timeline-item:nth-child(even)::after {
-    left: -6.5px; /* Adjust to center on line */
+    /* For even items (right side), item's left edge is at 50%.
+       Circle's 'left' property positions its left outer edge.
+       We want circle's center at 50%.
+       So, left edge of circle should be 7.5px to the left of the 50% line.
+       left: -7.5px;
+    */
+    left: -7.5px;
 }
+
 
 .timeline-content {
     padding: 20px 30px;
@@ -328,24 +354,33 @@ a:hover {
 
 /* Responsive adjustments for timeline */
 @media screen and (max-width: 768px) {
-    .timeline::after {
-        left: 20px; /* Move line to the left */
+    .timeline::after { /* The line */
+        left: 20px;
+        margin-left: 0; /* Reset margin-left as we use absolute left now */
     }
     .timeline-item {
         width: 100%;
-        padding-left: 50px; /* Adjust padding for items */
+        padding-left: 50px;
         padding-right: 15px;
     }
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
-        left: 0;
-        padding-left: 50px; /* Ensure consistent padding */
+        left: 0; /* All items stack on the left */
     }
+
+    /* Adjust circle position for mobile view */
     .timeline-item::after {
-        left: 13.5px; /* Position circle on the new line */
+        /* Line is at 20px, line width is 3px, so line center is 20 + 1.5 = 21.5px
+           Circle width is 15px, circle radius is 7.5px
+           We want circle center at 21.5px.
+           So circle's left edge should be 21.5px - 7.5px = 14px
+        */
+        left: 14px;
+        right: auto; /* Clear the right property from desktop view */
     }
-     .timeline-item:nth-child(even)::after {
-        left: 13.5px; /* Position circle on the new line */
+     .timeline-item:nth-child(even)::after { /* Ensure consistency for even items on mobile */
+        left: 14px;
+        right: auto; /* Clear the right property from desktop view */
     }
 }
 
