@@ -396,57 +396,73 @@ a:hover {
     /* overflow: hidden; /* Could be added if animations require it */
 }
 
-.skills-columns-container {
+.skills-list-container {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-    justify-content: space-around; /* Distribute space between columns */
-    gap: 2rem; /* Gap between columns when they wrap or are side-by-side */
+    flex-direction: column; /* Stack category rows vertically */
+    gap: 1.5rem; /* Space between category rows */
+    max-width: 800px; /* Constrain width for better readability */
+    margin: 0 auto; /* Center the container */
 }
 
-.skills-column {
-    flex: 1; /* Allow columns to grow */
-    min-width: 220px; /* Minimum width before wrapping/stacking */
-    padding: 1rem;
-    background-color: #2a2a2a; /* Similar to old skill-category bg */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.skills-column-title {
-    font-size: 1.5rem; /* Slightly smaller than main section titles */
-    color: #00cdd7; /* Accent color */
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #00cdd7;
-    text-align: center;
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-list li {
+.skill-category-row {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem; /* Increased spacing for a cleaner look */
+    align-items: flex-start; /* Align items to the top */
+    padding: 1rem 0;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+}
+
+.skill-category-row:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.skill-category-label {
+    flex: 0 0 200px; /* Fixed width for the label column */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00cdd7; /* Accent color for the label */
+    padding-right: 1rem; /* Space between label and items */
+    text-align: right; /* Align label text to the right, towards the items */
+}
+
+.skill-items {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-wrap: wrap; /* Allow skill items to wrap if needed */
+    gap: 0.8rem 1.5rem; /* Vertical and horizontal gap between skill items */
+    line-height: 1.8; /* Improve readability if items wrap */
+}
+
+.skill-items span {
     font-size: 1rem;
     color: #c0c0c0;
-    padding: 0.5rem;
+    background-color: #2a2a2a; /* Subtle background for each skill item */
+    padding: 0.3rem 0.8rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.skills-list li:hover {
-    background-color: #333333; /* Subtle hover for skill items */
+.skill-items span:hover {
+    background-color: #00cdd7; /* Accent color background on hover */
+    color: #121212; /* Dark text on hover */
 }
 
-.skill-icon {
-    width: 24px; /* Adjust size as needed */
-    height: 24px;
-    margin-right: 10px;
-    /* Assuming SVGs are used and can be colored with fill or filter */
+/* Responsive adjustments for Skills section */
+@media (max-width: 768px) {
+    .skill-category-row {
+        flex-direction: column; /* Stack label on top of items */
+        align-items: flex-start; /* Align all to start */
+    }
+    .skill-category-label {
+        width: auto; /* Allow label to take full width */
+        text-align: left; /* Align label text to the left */
+        margin-bottom: 0.5rem; /* Space between label and items */
+        font-size: 1.1rem;
+    }
+    .skill-items {
+        gap: 0.5rem 1rem; /* Adjust gap for smaller screens */
+    }
 }
+
 
 /* ==========================================================================
    Projects Section
