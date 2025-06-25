@@ -404,15 +404,15 @@ a:hover {
     border-radius: 15px; /* Increased border-radius for more rounded corners */
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Removed border-color from transition */
     height: 100%; /* Ensure cards in a row have same height */
-    border: 1px solid #444; /* Default subtle border */
+    border: 1px solid #383838; /* Lighter, more subtle border */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 205, 215, 0.3); /* Accent shadow on hover */
-    border-color: #00cdd7; /* Accent color border on hover */
+    /* border-color: #00cdd7; */ /* Removed accent color border on hover to keep it sleek */
 }
 
 .project-image-container {
