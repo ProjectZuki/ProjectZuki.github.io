@@ -30,409 +30,361 @@
     <meta property="og:image:height" content="400">
  </head>
  <body>
-    <!-- everything is hidden during "artificial" loading screen -->
-    <!-- <div class="loading-screen"> -->
-        <!-- loader contains load icon, styles, and animation -->
-        <!-- <div class="loader"></div> -->
-    <!-- </div> -->
-    <!-- <div class="content hidden"> -->
-        <!-- wrapper will act as body, for scrolling (another layer) -->
-        <div class="wrapper">
-            <!-- background image for title -->
-            <div class="background">
-                <!-- background image selection -->
-                <img src="images/code_background.png">
+    <div class="wrapper">
+        <!-- Hero Section -->
+        <header id="hero" class="hero-section text-center">
+            <div class="hero-content">
+                <!-- <h1 class="name-title">
+                    W I L L I E A L C A R A Z
+                </h1> -->
+                <img src="images/signature_initials.png" alt="Willie Alcaraz Signature" class="hero-signature-image filter-to-white">
+                <p class="hero-subtitle">
+                    <!-- Hi, I'm <span class="highlighted-name" id="animated-name">Willie Alcaraz</span> <br> -->
+                    <span class="section-title" id="software-engineer-title-container">
+                        <span id="software-engineer-text"></span><span class="cursor1-animation">|</span>
+                    </span>
+                    <!-- <span class="hero-role">Software Engineer</span> -->
+                    <br>Las Vegas, Nevada.
+                    <div class="hero-quote">
+                        <span class="quote-text"><i>"Anyone who has never made a mistake has never tried anything new."</i></span>
+                        <span class="quote-author">- Albert Einstein</span>
+                    </div>
+                </p>
+                <div class="hero-nav-buttons mt-4">
+                    <!-- <a href="#about" class="btn btn-outline-light hero-nav-button mx-2 my-2">About Me</a> -->
+                    <a href="#journey" class="btn btn-outline-light hero-nav-button mx-2 my-2">Timeline</a>
+                    <!-- TODO: Add section for skills -->
+                    <a href="#skills" class="btn btn-outline-light hero-nav-button mx-2 my-2">Tech Stack</a>
+                    <a href="#projects" class="btn btn-outline-light hero-nav-button mx-2 my-2">Projects</a>
+                    <!-- TODO: Add section for Gallery -->
+                    <a href="#gallery" class="btn btn-outline-light hero-nav-button mx-2 my-2">Gallery</a>
+                    <a href="#contact" class="btn btn-outline-light hero-nav-button mx-2 my-2">Contact</a>
+                </div>
             </div>
-            <!-- title text will be animated for name -->
-            <header class="text-center">
-                <h1 class="title title-slide-up">Willie Alcaraz</h1>
-                <h2 class="foreground">
-                    <span id="subtitle-line1"></span>
-                    <br>
-                    <span class="subtitle-line2" id="subtitle-line2"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                </h2>
-            </header>
+        </header>
 
-            <div class="button-section">
-                <!-- button to scroll to speciic section in site -->
-                <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
-                <button id="scroll_projects_btn" class="btn btn-primary my-3">Projects</button>
-                <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
+        <!-- Navigation Buttons (Optional - can be integrated differently or removed if not fitting the new style) -->
+        <!--
+        <nav class="navigation-buttons text-center py-3">
+            <a href="#about" class="btn btn-outline-light mx-2">About Me</a>
+            <a href="#journey" class="btn btn-outline-light mx-2">Timeline</a>
+            <a href="#skills" class="btn btn-outline-light mx-2">Skills</a>
+            <a href="#projects" class="btn btn-outline-light mx-2">Projects</a>
+            <a href="#contact" class="btn btn-outline-light mx-2">Contact Me</a>
+        </nav>
+        -->
+
+        <!-- About Section -->
+        <section id="about" class="about-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="images/self_image2.jpeg" alt="Willie Alcaraz" class="profile-image img-fluid rounded-circle shadow">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="section-title" id="about-me-title-container">
+                            <span id="about-me-name"></span><span class="cursor-animation">|</span>
+                        </h2>
+                        <p class="about-text-content">
+                            <strong>Software Engineer</strong> at a Las Vegas gaming startup, building immersive and user-focused gameplay experiences.
+                            <br><br>
+
+                            <strong>Graduate</strong> from the <span class="text-unlv">University of Nevada Las Vegas</span> with a B.S. in Computer Science, focusing on software engineering, algorithms, and data structures.
+                            <br><br>
+                            Former <strong>Academic Tutor</strong> at the <span class="text-csn">College of Southern Nevada</span>, helping hundreds of students master core computer science principles.
+                            <br><br> 
+
+                            Lead performer and technical director for the <strong>Drumbots</strong>, the premier LED drumline in Las Vegas and official NHL drumline for the  <span class="text-vgk">Vegas Golden Knights</span>.
+                             Delivering high-energy performances for the NHL, NBA, NFL, and top-tier Vegas venues.
+                            <br><br>
+                            <!-- <i>Passionate about building cutting-edge software that blends innovation with intuitive user experiences.</i> -->
+                             <!-- <i>I do the coding thing.</i> -->
+                        </p>
+                        <div class="social-links-about text-center text-md-start mt-4">
+                            <a href="https://www.linkedin.com/in/williealcaraz/" target="_blank" class="social-icon-link"><img src="images/html_sig_icons/linkedIn_icon_black.png" alt="LinkedIn" class="social-icon filter-to-white"></a>
+                            <a href="https://github.com/ProjectZuki" target="_blank" class="social-icon-link"><img src="images/html_sig_icons/github-mark.png" alt="GitHub" class="social-icon filter-to-white"></a>
+                            <a href="mailto:willie.alcaraz@gmail.com" class="social-icon-link"><img src="images/html_sig_icons/email_icon.png" alt="Email" class="social-icon filter-to-white"></a>
+                            <a href="files/Willie_Alcaraz_Resume.pdf" target="_blank" class="btn btn-outline-light resume-button ms-3">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <section class="py-5">
-                <!-- animate image of self, image-section contains the animated properties of images -->
-                <section class="image-section py-5">
-                    <!-- separate div to adjust position and size -->
-                    <div class="self-image">
-                        <div class="col-md-4 col-12 mb-4">
-                                <img src="images/self_image.jpeg" class="animated-image">
-                        </div>
-                    </div>
-                </section>
-                <!-- "About" text utilizes the typing animation -->
-                <h1 class="about-text-title" id="about-text-title">
-                    <span id="about-text-line"></span>
-                    <!-- cursor animation class and id consistent with all typing animations -->
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                </h1>
-                <!-- About section summary -->
-                <div class="about-text">
-                    <p>
-                        <!-- <i>Hello, and welcome.</i><br> -->
-                        <strong>Graduate</strong> of <span style="color: #B10202;">University of Nevada Las Vegas</span>
-                        holding a Bachelor of Science degree in Computer Science.
-                        <br><br>
-                        <strong>Academic Tutor</strong> at <span style="color: #004990">College of Southern Nevada</span>, 
-                        mentoring CS students allowing them to excel
-                        in their studies and understanding of programming language concepts and algorithms.
-                        <br><br>
-                        Resilient <strong>lead</strong> in the <strong>Drumbots</strong>, a world-renowned international LED 
-                        percussion act well known as the the official NHL drumline for
-                        the <span style="color: #B4975A">Vegas Golden Knights</span>.
-                        <br><br>
-                        <hr style="border-top: 1px solid #ccc; border-bottom: none; margin: 20px 0;">
-                        <!-- HERE -->
-                        <i>The demand for software solutions increase at the rate of rapidly expanding technologies.
-                            I envision the future of software solutions for tomorrow's digital landscape thriving at 
-                            the crossroads of innovation and technology.
-                        </i>
-                        <hr style="border-top: 1px solid #ccc; border-bottom: none; margin: 20px 0;">
-                        <br>
-                    </p>
-                </div>
-            </section>
-            <!-- image-section to utilze image animations, gallery view to utilze row view -->
-            <section class="image-section gallery-view py-5">
-                <!-- <h2 class="text-center text-light"> -->
-                <h2 class="gallery-text-title" id="gallery-text-title">
-                    <span id="gallery-text-line"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
+        <!-- My Journey Section -->
+        <section id="journey" class="journey-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5" id="journey-title-container">
+                    <span id="journey-title-text"></span><span class="cursor-animation">|</span>
                 </h2>
-                <h5 class="text-center text-light">
-                    <p>
-                        <i>Below are photos of exceptional work performed by our team at Drumbots.</i>
-                    </p>
-                </h5>
-                <!-- image container, additional images will be added in the horizontal view -->
-                <div class="image-container-row">
-                    <!-- column width, vertical spacing -->
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <!-- image source -->
-                            <img src="images/db_stanleycup.jpg" class="animated-image">
-                            <!-- image caption will appear on hover (or tap on mobile  device) -->
-                            <p class="caption">Photo with the team, Vegas Golden Knights Knightline</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <p><b>Startup Gaming Company, Las Vegas</b></p>
+                            <p>Building innovative gaming experiences with a focus on full-stack engineering and user-centric design.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/vgk_guy_fieri.JPG" class="animated-image">
-                            <p class="caption">Knightline with Guy Fieri, Flavortown, 2023</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>B.S. Computer Science</h3>
+                            <p><b>University of Nevada Las Vegas</b></p>
+                            <p>Focus on software engineering, data structures, algorithms, AI/ML, autonomus racing, collaborative projects, etc.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/drumbots_paris.JPG" class="animated-image">
-                            <p class="caption">Drumbots, Ligue nationale de basket. Paris, France, 2018</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Academic Tutor - Computer Science</h3>
+                            <p><b>College of Southern Nevada</b></p>
+                            <p>Mentored students in programming concepts, data structures, and problem-solving techniques.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/drumbots_xs_gronk.JPG" class="animated-image">
-                            <p class="caption">Drumbots, XS Wynn with Rob Gronkowski, 2021</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/ceelo_toronto.jpg" class="animated-image">
-                            <p class="caption">Drumbots and CeeLo Green, Toronto, Canada 2019</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/aspen_times.jpg" class="animated-image">
-                            <p class="caption">Front page, The Aspen Times, 2021</p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Drumbots</h3>
+                            <p><b>Drum As One - LED Percussion Crew</b></p>
+                            <p>Lead technical operations and performance design for Las Vegas' premier LED drumline, 
+                                delivering dynamic shows for major sports events, top-tier nightclubs, high-profile clients, 
+                                and the NHL’s Vegas Golden Knights.</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- section with vertical padding (py) -->
-            <section class="py-5 projects-section">
-                <!-- container for text contents -->
-                <div class="container">
-                    <!-- title class and id elements for typing effect on title -->
-                    <h2 class="projects-text-title" id="projects-text-title">
-                        <!-- title text contents specified in script.js -->
-                        <span id="projects-text-line"></span>
-                        <!-- utilize same cursor element as previously -->
-                        <span id="cursor-animation" class="cursor-animation">|</span>
-                    </h2>
-                    
-                    <!-- two column presentation -->
-                    <div class="row">
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" id="skills-title-container">
+            <span id="skills-title-text"></span><span class="cursor-animation">|</span>
+            </h2>
 
-                        <!-- Project Description -->
-                        <div class="col-md-6">
-                            <h3><strong>LED Control Module</strong></h3>
-                            <!-- Images Section -->
-                            <div class="row mb-3">
-                                <!-- Show as video with aspect ratio control -->
-                                <div class="col-md-6 mb-2">
-                                    <div class="image-wrapper">
-                                        <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm" loading="lazy">
-                                            <source src="images/ProjectImages/LEDModule0.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                                
-                                <!-- Image with aspect ratio control -->
-                                <div class="col-md-6 mb-2">
-                                    <div class="image-wrapper">
-                                        <img src="images/ProjectImages/LEDModule1.jpg" alt="Real-World testing" class="img-fluid rounded shadow-sm">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p>
-                                Developed a custom drum trigger LED module tailored for the Drumbots to enhance their performances
-                                 for the Vegas Golden Knights as well as local and international performances.<br>
-                                <i><u>Highlights:</u></i>
-                                <ul class="feature-list">
-                                    <li>Dynamic LED customization</li>
-                                    <li>Drum trigger interaction with LED lighting</li>
-                                    <li>ARGB strip integration for customized lighting effects</li>
-                                    <li>Scalable and reliable design</li>
-                                    <li>Real-time responsiveness for rhythmic trigger</li>
-                                </ul>
-                                <i><u>Technologies and Tools:</u></i>
-                                <ul class="feature-list">
-                                    <li>C++ (AVR-GCC Compiler)</li>
-                                    <li>Arduino microcontroller</li>
-                                    <li>Piezo and Infrared sensors</li>
-                                    <li>Embedded systems design</li>
-                                </ul>
-                            </p>
-
-                            <a href="https://github.com/ProjectZuki/led-control-module" class="btn btn-outline-dark btn-github" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
-                            </a>
-
-                            <hr>
-                        </div>
-
-                        
-                        <!-- Project Description -->
-                        <div class="col-md-6">
-                            <h3><strong>F1tenth Autonomous Racing</strong></h3>
-                            <!-- Images Section -->
-                            <div class="row mb-3">
-                                <!-- First Image (GIF or Video) -->
-                                <div class="col-md-6 mb-2">
-                                    <div class="image-wrapper">
-                                        <!-- show as video -->
-                                        <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm" loading="lazy">
-                                            <source src="images/ProjectImages/F1Tenth0.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                                
-                                <!-- Second Image (GIF or Video) -->
-                                <div class="col-md-6 mb-2">
-                                    <div class="image-wrapper">
-                                        <!-- show as video -->
-                                        <video autoplay loop muted playsinline class="img-fluid rounded shadow-sm" loading="lazy">
-                                            <source src="images/ProjectImages/F1Tenth1.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <p>
-                                A collaborative effort developing an autonomous vehicle capable of navigating tracks quickly and efficiently,
-                                 using environmental sensors and algorithms to make real-time decisions while minimizing error.<br>
-                                <i><u>Key Features:</u></i>
-                                <ul class="feature-list">
-                                    <li>Autonomous Navigation Algorithms Development</li>
-                                    <li>Simultaneous Localization and Mapping (SLAM)</li>
-                                    <li>Deep Learning</li>
-                                </ul>
-                                <i><u>Technologies utilized:</u></i>
-                                <ul class="feature-list">
-                                    <li>Python</li>
-                                    <li>C++</li>
-                                    <li>ROS (Robot Operating System)</li>
-                                    <li>Docker</li>
-                                    <li>LiDAR</li>
-                                    <li>TensorFlow</li>
-                                </ul>
-                            </p>
-
-                            <!-- GitHub Repository Link -->
-                            <a href="https://github.com/ProjectZuki/GalacticRacing" class="btn btn-outline-dark btn-github" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
-                            </a>
-
-                            <hr>
-                        </div>
-
-                        <!-- Project Description -->
-                        <div class="col-md-6">
-                            <h3><strong>Personal Webpage</strong></h3>
-                            <p>
-                                This webpage showcases effects such as parallax as well as animations to create a responsive webpage 
-                                to serve as a personal portfolio / website as well as a continous project to learn and explore features.<br>
-                                <i><u>Key Features:</u></i>
-                                <ul class="feature-list">
-                                    <li>Dynamic animations</li>
-                                    <li>Smooth scrolling</li>
-                                    <li>Parallax</li>
-                                    <li>Interactive elements</li>
-                                </ul>
-                                <i><u>Technologies utilized:</u></i>
-                                <ul class="feature-list">
-                                    <li>HTML, CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>Intersection Observer API</li>
-                                    <li>Bootstrap framework</li>
-                                    <!-- <li>GitHub</li> -->
-                                </ul>
-                            </p>
-
-                            <!-- GitHub Repository Link -->
-                            <a href="https://github.com/ProjectZuki/ProjectZuki.github.io" class="btn btn-outline-dark btn-github" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
-                            </a>
-                            <hr>
-                        </div>
-                        
-                        <!-- Project Description -->
-                        <div class="col-md-6">
-                            <h3><strong>CNN Seizure Prediction</strong></h3>
-                            <p>
-                                Contributed to a group project developing a convolutional neural network to predict seizures using raw electroencephalogram (EEG) data and spectrograms, 
-                                demonstrating machine learning applications in healthcare.<br>
-                                <i><u>Key Features:</u></i>
-                                <ul class="feature-list">
-                                    <li>EEG data preprocessing</li>
-                                    <li>Spectrogram analysis</li>
-                                    <li>Convolutional Neural Network (CNN)</li>
-                                    <li>Seizure detection</li>
-                                </ul>
-                                <i><u>Technologies utilized:</u></i>
-                                <ul class="feature-list">
-                                    <li>Python</li>
-                                    <li>TensorFlow</li>
-                                    <li>Numpy</li>
-                                    <li>Matplotlib</li>
-                                </ul>
-                            </p>
-                            
-                            <!-- GitHub Repository Link -->
-                            <a href="https://github.com/ProjectZuki/cs422-EEG-Classification" class="btn btn-outline-dark btn-github" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
-                            </a>
-                            
-                            <hr>
-                        </div>
-
-                        <!-- Project Description -->
-                        <!-- <div class="col-md-6">
-                            <h3><strong>iOS App</strong></h3>
-                            <p>
-                                This iOS app is a prototype for managing events and client profiles, inspired by work in the 
-                                entertainment industry.<br>
-                                <i><u>Key Features:</u></i>
-                                <ul class="feature-list">
-                                    <li>Event creation and management</li>
-                                    <li>Client profile tracking</li>
-                                </ul>
-                                <i><u>Technologies utilized:</u></i>
-                                <ul class="feature-list">
-                                    <li>SwiftUI</li>
-                                    <li>JSON encoding/decoding</li>
-                                    <li>Navigation struct</li>
-                                    <li>Edit functionality</li>
-                                </ul>
-                            </p>
-                            <hr>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <section class="py-5 contact-section">
-                <div class="contact-container">
-                    <h1 class="contact-text-title" id="contact-text-title">
-                        <!-- title text contents specified in script.js -->
-                        <span id="contact-text-line"></span>
-                        <!-- utilize same cursor element as previously -->
-                        <span id="cursor-animation" class="cursor-animation">|</span>
-                    </h1>
-                    <!-- contact information -->
-                    <ul class="contact-icons">
-                        <!-- email -->
-                        <li class="contact-thing">
-                            <a href="mailto:willie.alcaraz@gmail.com">
-                                <img src="images/email_icon.png" alt="Email" class="contact-icon" />
-                                willie.alcaraz@gmail.com
-                            </a>
-                        </li>
-                        <!-- phone -->
-                        <li class="contact-thing">
-                            <a href="https://www.linkedin.com/in/williealcaraz/" target="_blank">
-                                <img src="images/html_sig_icons/linkedIn_icon_black.png" alt="LinkedIn" class="contact-icon" />
-                                /williealcaraz
-                            </a>
-                        </li>
-                        <!-- LinkedIn -->
-                        <li class="contact-thing">
-                            <a href="https://github.com/ProjectZuki" target="_blank">
-                                <img src="images/html_sig_icons/github-mark.png" alt="GitHub" class="contact-icon" />
-                                /ProjectZuki
-                            </a>
-                        </li>
-                        <!-- GitHub -->
-                        <li class="contact-thing">
-                            <a href="files/Willie_Alcaraz_Resume.pdf" target="_blank">
-                                <img src="images/html_sig_icons/resume_icon.png" alt="Resume" class="contact-icon" />
-                                Download Resume
-                            </a>
-                        </li>
+            <div class="skills-grid">
+            
+                <!-- Core Technologies -->
+                <div class="skill-row">
+                    <div class="skill-label">Core Technologies</div>
+                    <ul class="skill-items">
+                    <li><img src="images/skills_icons/cplusplus.svg" alt="C++" class="skill-icon"> C++</li>
+                    <li><img src="images/skills_icons/python.svg" alt="Python" class="skill-icon"> Python</li>
+                    <li><img src="images/skills_icons/html5.svg" alt="HTML5" class="skill-icon"> HTML5</li>
+                    <li><img src="images/skills_icons/css3.svg" alt="CSS3" class="skill-icon"> CSS3</li>
+                    <li><img src="images/skills_icons/csharp.svg" alt="C#" class="skill-icon"> C#</li>
+                    <li><img src="images/skills_icons/java.svg" alt="Java" class="skill-icon"> Java</li>
+                    <li><img src="images/skills_icons/javascript.svg" alt="JavaScript" class="skill-icon"> JavaScript</li>
+                    <li><img src="images/skills_icons/bootstrap.svg" alt="Bootstrap" class="skill-icon"> Bootstrap</li>
                     </ul>
                 </div>
-            </section>
 
-            <img src="images/signature_initials.png"   class="signature" 
-                                                            alt="Willie Alcaraz"
-                                                            style=" width: 250px; 
-                                                                    height: auto; 
-                                                                    display: block; 
-                                                                    margin: 0 auto;" />
-
-            <!-- Quote for the bottom of the webpage -->
-            <section class="py-5">
-                <!-- text container for separate styles -->
-                <div class="quote-container">
-                    <p>
-                        <!-- utilize custom google font -->
-                        <span class="custom-font">"Anyone who has never made a mistake has never tried anything new." 
-                        <br>
-                        - <i>Albert Einstein</i>
-                        </span>
-                    </p>
+                <!-- Databases & Tools -->
+                <div class="skill-row">
+                    <div class="skill-label">Databases & Tools</div>
+                    <ul class="skill-items">
+                    <li><img src="images/skills_icons/visual-studio-code-logo.svg" alt="Visual Studio Code" class="skill-icon"> Visual Studio Code</li>
+                    <li><img src="images/skills_icons/visual-studio-logo.svg" alt="Visual Studio" class="skill-icon"> Visual Studio</li>
+                    <li><img src="images/skills_icons/git.svg" alt="Git" class="skill-icon"> Git</li>
+                    <li><img src="images/skills_icons/github_dark.svg" alt="GitHub" class="skill-icon"> GitHub</li>
+                    <li><img src="images/skills_icons/docker.svg" alt="Docker" class="skill-icon"> Docker</li>
+                    <li><img src="images/skills_icons/VirtualBox_2024_Logo.svg" alt="VirtualBox" class="skill-icon"> VirtualBox</li>
+                    <li><img src="images/skills_icons/mysql.svg" alt="MySQL" class="skill-icon"> MySQL</li>
+                    <li><img src="images/skills_icons/ros.svg" alt="ROS" class="skill-icon"> ROS</li>
+                    </ul>
                 </div>
-            </section>
 
-            <!-- copyright footer -->
-            <footer class="text-center">
-                <div class="copyright-footer">&copy; 2024 Willie Alcaraz | [Project]Zuki</div>
-            </footer>
+                <!-- Platforms & SDKs -->
+                <div class="skill-row">
+                    <div class="skill-label">Platforms & SDKs</div>
+                    <ul class="skill-items">
+                    <li><img src="images/skills_icons/embedded_c.svg" alt="Embedded C/C++" class="skill-icon"> Embedded C/C++</li>
+                    <li><img src="images/skills_icons/arduino.svg" alt="Arduino" class="skill-icon"> Arduino</li>
+                    <li><img src="images/skills_icons/linux.svg" alt="Linux" class="skill-icon"> Linux</li>
+                    <li><img src="images/skills_icons/tensorflow.svg" alt="TensorFlow" class="skill-icon"> TensorFlow</li>
+                    </ul>
+                </div>
+
+                <!-- AI Workflow -->
+                <div class="skill-row">
+                    <div class="skill-label">AI Workflow</div>
+                    <ul class="skill-items">
+                    <li><img src="images/skills_icons/OpenAI-white-monoblossom.svg" alt="chatGPT" class="skill-icon"> chatGPT</li>
+                    <li><img src="images/skills_icons/OpenAI-white-wordmark.svg" alt="OpenAI API" class="skill-icon"> OpenAI API</li>
+                    <li><img src="images/skills_icons/google-gemini.svg" alt="Jules" class="skill-icon"> Jules, by Gemini</li>
+                    <li><img src="images/skills_icons/github-copilot-icon.svg" alt="GitHub CoPilot" class="skill-icon filter-to-white"> GitHub CoPilot</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-    <!-- </div> -->
+        </section>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5" id="projects-title-container">
+                    <span id="projects-title-text"></span><span class="cursor-animation">|</span>
+                </h2>
+                <p class="text-center mb-5">A Mix of University / Personal Projects</p>
+                <div class="row">
+                    <!-- Project 1: LED Control Module -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <!-- <video autoplay loop muted playsinline class="project-image" loading="lazy">
+                                    <source src="images/ProjectImages/LEDModule0.mp4" type="video/mp4">
+                                </video> -->
+                                <div class="project-image-container">
+                                <img src="images/ProjectImages/LEDModule1.jpg" alt="Drumbots LED Drumline Las Vegas" class="project-image">
+                            </div>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">LED Control Module</h3>
+                                <p class="project-description">
+                                    Custom drum trigger LED microcontroller catered for the Drumbots, enhancing performances with dynamic, real-time lighting effects.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">C++</span><span class="tag">Arduino</span><span class="tag">Embedded Systems</span><span class="tag">Microcontrollers</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ProjectZuki/led-control-module" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
+                                    <!-- <a href="#" class="btn btn-outline-light btn-sm" target="_blank">Live Demo</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: F1tenth Autonomous Racing -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="project-card">
+                           <div class="project-image-container">
+                                <video autoplay loop muted playsinline class="project-image" loading="lazy">
+                                    <source src="images/ProjectImages/F1Tenth1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title"><strong>F1tenth</strong> Autonomous Racing</h3>
+                                <p class="project-description">
+                                    Collaborative project for the F1tenth racing competition, utilizing autonous navigation algorithms.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span><span class="tag">C++</span><span class="tag">ROS</span><span class="tag">SLAM</span><span class="tag">RTS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ProjectZuki/GalacticRacing" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/f1tenth" class="btn btn-outline-light btn-sm" target="_blank"><strong>F1tenth</strong> Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Personal Webpage -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <!-- Placeholder or actual image for portfolio -->
+                                <img src="images/code_background.png" alt="Personal Webpage" class="project-image" style="filter: blur(3px);">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Personal Portfolio Website</h3>
+                                <p class="project-description">
+                                   This dynamic and responsive portfolio, showcasing projects, skills, and interactive animations.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ProjectZuki/ProjectZuki.github.io" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: CNN Seizure Prediction -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <!-- Placeholder for CNN project - replace with actual image/video if available -->
+                                <img src="images/ProjectImages/eeg.png" alt="CNN Seizure Prediction" class="project-image placeholder-icon">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Neural Network Seizure Prediction</h3>
+                                <p class="project-description">
+                                    Developed a Neural Network model for seizure prediction using EEG data and spectrograms, applying ML in healthcare.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Machine Learning</span><span class="tag">Artificial Intelligence</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ProjectZuki/cs422-EEG-Classification" class="btn btn-outline-light btn-sm" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Formerly Drumbots Gallery) - Can be integrated or kept separate -->
+        <section id="gallery" class="gallery-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5" id="gallery-title-container">
+                    <span id="gallery-title-text"></span><span class="cursor-animation">|</span>
+                </h2>
+                 <p class="text-center mb-5"><i>Moments of exceptional performances and events.</i></p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/db_stanleycup.jpg" alt="Drumbots with Stanley Cup" class="img-fluid">
+                        <div class="gallery-caption">Vegas Golden Knights Knightline with the Stanley Cup</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/vgk_guy_fieri.JPG" alt="Knightline with Guy Fieri" class="img-fluid">
+                        <div class="gallery-caption">Knightline with Guy Fieri, 2023</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/drumbots_paris.JPG" alt="Drumbots in Paris" class="img-fluid">
+                        <div class="gallery-caption">Drumbots in Paris, France, 2018</div>
+                    </div>
+                     <div class="gallery-item">
+                        <img src="images/drumbots_xs_gronk.JPG" alt="Drumbots with Rob Gronkowski" class="img-fluid">
+                        <div class="gallery-caption">Drumbots at XS Wynn with Rob Gronkowski, 2021</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/ceelo_toronto.jpg" alt="Drumbots with CeeLo Green" class="img-fluid">
+                        <div class="gallery-caption">Drumbots and CeeLo Green, Toronto, 2019</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/aspen_times.jpg" alt="Aspen Times Feature" class="img-fluid">
+                        <div class="gallery-caption">Front page, The Aspen Times, 2021</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section py-5 text-center">
+            <div class="container">
+                <h2 class="section-title mb-4" id="contact-title-container">
+                    <span id="contact-title-text"></span><span class="cursor-animation">|</span>
+                </h2>
+                <div class="social-links-contact mt-4">
+                    <a href="mailto:willie.alcaraz@gmail.com" class="social-icon-link"><img src="images/html_sig_icons/email_icon.png" alt="Email" class="social-icon filter-to-white"></a>
+                    <a href="https://www.linkedin.com/in/williealcaraz/" target="_blank" class="social-icon-link"><img src="images/html_sig_icons/linkedIn_icon_black.png" alt="LinkedIn" class="social-icon filter-to-white"></a>
+                    <a href="https://github.com/ProjectZuki" target="_blank" class="social-icon-link"><img src="images/html_sig_icons/github-mark.png" alt="GitHub" class="social-icon filter-to-white"></a>
+                    <a href="files/Willie_Alcaraz_Resume.pdf" target="_blank" class="social-icon-link"><img src="images/html_sig_icons/resume_icon.png" alt="Resume" class="social-icon filter-to-white"></a>
+                </div>
+                 <img src="images/signature_initials_glow.png" class="signature-image mt-5 filter-to-white" alt="WA Signature">
+            </div>
+        </section>
+
+        <footer class="footer text-center py-4">
+             <!-- <p class="quote-einstein mb-3">"Anyone who has never made a mistake has never tried anything new." - <i>Albert Einstein</i></p> -->
+            <p class="copyright-text">&copy; 2025 Willie Alcaraz | [Project]Zuki</p>
+        </footer>
+    </div>
 
     <!-- jQuery (required by Bootstrap) from CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -442,6 +394,5 @@
     <script src="script.js"></script>
  </body>
  </html>
- 
+
  <!-- ************************** EOF index.html ***************************** -->
- 
