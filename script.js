@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Re-implement or adapt previous Intersection Observer animations if they fit the new design.
     // Example: Fade-in elements as they scroll into view.
 
-    const revealElements = document.querySelectorAll('.timeline-item, .skill-category, .project-card, .gallery-item');
+     const revealElements = document.querySelectorAll('.timeline-item, .skill-row, .project-card, .gallery-item');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry, index) => { // Added index here
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const parentProjectsRow = entry.target.closest('.projects-section .row');
                 const parentGalleryGrid = entry.target.closest('.gallery-grid');
 
-                if (parentSkillsGrid && entry.target.classList.contains('skill-category')) {
-                    const items = Array.from(parentSkillsGrid.querySelectorAll('.skill-category'));
+                if (parentSkillsGrid && entry.target.classList.contains('skill-row')) {
+                    const items = Array.from(parentSkillsGrid.querySelectorAll('.skill-row'));
                     delay = items.indexOf(entry.target) * 150; // 150ms stagger
                 } else if (parentProjectsRow && entry.target.classList.contains('project-card')) {
                     const items = Array.from(parentProjectsRow.querySelectorAll('.project-card'));
