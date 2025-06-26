@@ -42,7 +42,7 @@ Option 1: [VIsit the website](https://williealcaraz.dev)
 Option 2. Clone the repository:
 
 bash
-git clone [https://github.com/your-username/your-portfolio-website.git](https://github.com/ProjectZuki/ProjectZuki.github.io.git)
+git clone https://github.com/ProjectZuki/ProjectZuki.github.io.git
 
 1. Open `index.html` in web browser to view site
 2. Customize contents via `index.html` and `styles.css`
