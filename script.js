@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
-    setupTitleAnimation("skills-title-container", "skills-title-text", "Dev Toolkit");
+    setupTitleAnimation("skills-title-container", "skills-title-text", "Tech Stack");
     setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");
     setupTitleAnimation("gallery-title-container", "gallery-title-text", "Gallery");
     setupTitleAnimation("contact-title-container", "contact-title-text", "Contact Me");
