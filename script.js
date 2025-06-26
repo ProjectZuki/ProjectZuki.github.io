@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             animateTitleTextRecursive(fullText, textElement, cursorElement, 0, TYPING_SPEED, () => {
                                 // Optional: any action after typing is complete
                             });
-                        }, 500); // set delay in ms
+                        }, 600); // set delay in ms
                         titleObserver.unobserve(entry.target);
                     }
                 });
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
-    setupTitleAnimation("skills-title-container", "skills-title-text", "Tech Stack");
+    setupTitleAnimation("skills-title-container", "skills-title-text", "Dev Toolkit");
     setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");
     setupTitleAnimation("gallery-title-container", "gallery-title-text", "Gallery");
     setupTitleAnimation("contact-title-container", "contact-title-text", "Contact Me");
