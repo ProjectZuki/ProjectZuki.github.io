@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     entry.target.style.opacity = "1";
                     entry.target.style.transform = "translateY(0)";
-                }, delay);
+                }, delay+150);
 
                 observer.unobserve(entry.target);
             }
