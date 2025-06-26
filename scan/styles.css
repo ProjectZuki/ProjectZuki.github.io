@@ -66,6 +66,7 @@ body, html {
     padding: 0.75rem 1rem; /* Generous padding for tapping */
     border-width: 2px; /* Slightly thicker border */
     border-color: var(--accent-color);
+    border-radius: 16px; /* Rounded corners */
     color: var(--accent-color);
     text-align: left; /* Align text to the left */
     white-space: nowrap; /* Prevent text wrapping */

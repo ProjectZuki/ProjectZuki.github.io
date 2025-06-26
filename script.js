@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTitleAnimation("projects-title-container", "projects-title-text", "Projects");
     setupTitleAnimation("gallery-title-container", "gallery-title-text", "Gallery");
     setupTitleAnimation("contact-title-container", "contact-title-text", "Contact Me");
+    setupTitleAnimation("scan-title-container", "scan-title-text", "Willie Alcaraz");
 
     // ------------------------ Old Image Gallery Animation (To be reviewed/repurposed) ------------------------ //
     // The previous image gallery had a specific slide-in animation.

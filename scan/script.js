@@ -103,10 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailText = "willie.alcaraz@gmail.com";
   const websiteText = "williealcaraz.dev";
   const githubText = "ProjectZuki";
+  const nameText = "Willie Alcaraz";
   const contactTextSpan = document.getElementById("phone-number-line");
   const emailTextSpan = document.getElementById("email-text-line");
   const websiteTextSpan = document.getElementById("website-text-line");
   const githubTextSpan = document.getElementById("github-text-line");
+  const nameTextSpan = document.getElementById("name-text-line");
 
   const contactTitleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -142,6 +144,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 500);
           });
         }, 6000);  //modify delay for githubText
+
+        setTimeout(() => {
+          animateTitleText(nameText, nameTextSpan, cursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
+            setInterval(() => {
+              cursorElement.style.opacity = cursorElement.style.opacity == "0"? "1" : "0";
+            }, 500);
+          });
+        }, 6000);  //modify delay for name text
+
+
 
         // unobserve section
         contactTitleObserver.unobserve(entry.target);
