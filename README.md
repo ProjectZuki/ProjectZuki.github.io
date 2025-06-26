@@ -37,11 +37,12 @@ This website serves as my online presence and portfolio as a computer science st
 - Visual Studio Code (Code editor)
 
 ## Usage
+Option 1: [VIsit the website](https://williealcaraz.dev)
 
-1. Clone the repository:
+Option 2. Clone the repository:
 
 bash
-git clone https://github.com/your-username/your-portfolio-website.git
+git clone [https://github.com/your-username/your-portfolio-website.git](https://github.com/ProjectZuki/ProjectZuki.github.io.git)
 
 1. Open `index.html` in web browser to view site
 2. Customize contents via `index.html` and `styles.css`
