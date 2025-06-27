@@ -42,6 +42,15 @@ body, html {
     font-size: 1.5rem; /* Match subtitle font size */
 }
 
+.hero-content {
+    margin-bottom: 1rem; /* or 2em, or remove entirely if not needed */
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        margin-bottom: 0rem;
+    }
+}
 
 .contact-links-section {
     background-color: var(--secondary-color); /* Consistent background */
