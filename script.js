@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // will be handled in the next plan step. The JS will use the new names here.
 
     // Typing animation for "Willie Alcaraz" in About Me section
-    setupTitleAnimation("software-engineer-title-container", "software-engineer-text", "Software Engineer", accentColor);
-    setupTitleAnimation("about-me-title-container", "about-me-name", "Willie Alcaraz");
+    setupTitleAnimation("name-title-container", "name-text", "Willie Alcaraz", accentColor);
+    setupTitleAnimation("about-me-title-container", "about-me-name", "About");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
     setupTitleAnimation("skills-title-container", "skills-title-text", "Tech Stack");
