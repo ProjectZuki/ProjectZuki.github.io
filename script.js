@@ -4,8 +4,7 @@
  * This script handles animations and interactions for the modernized portfolio website.
  * Includes smooth scrolling, and potentially new animations for hero section and reveal effects.
  * 
- * @author Willie Alcaraz | [Project]Zuki (Updated by AI)
- * @version 2.0.0
+ * @author Willie Alcaraz | [Project]Zuki
  * @date Current Date
  */
 
@@ -101,7 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ------------------------ Typing Animations for Section Titles ------------------------ //
 
-    const TYPING_SPEED = 75; // Adjusted speed, slightly slower
+    const TYPING_SPEED = 35; // ms per character when typing for section titles (kept snappy)
+    const MULTIWORD_TYPING_SPEED = 40; // ms per character for the multi-word name sequence (a bit slower)
 
     // Recursive function for typing animation
     function animateTitleTextRecursive(text, textElement, cursorElement, currentIndex, speed, callback) {
@@ -151,12 +151,93 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Multi-word typing with backspace, ending on final word without removing it
+    function typeText(text, el, speed, callback) {
+        if (!el) return;
+        let i = 0;
+        function step() {
+            if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(step, speed);
+            } else if (callback) {
+                callback();
+            }
+        }
+        step();
+    }
+
+    function backspaceText(el, speed, callback) {
+        if (!el) return;
+        function step() {
+            if (el.textContent.length > 0) {
+                el.textContent = el.textContent.slice(0, -1);
+                setTimeout(step, speed);
+            } else if (callback) {
+                callback();
+            }
+        }
+        step();
+    }
+
+    function setupMultiWordTyping(containerId, textSpanId, wordsArray, color) {
+        const titleContainer = document.getElementById(containerId);
+        const textElement = document.getElementById(textSpanId);
+        const cursorElement = textElement ? textElement.nextElementSibling : null;
+
+        if (titleContainer && textElement && cursorElement) {
+            const titleObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            textElement.textContent = '';
+                            if (color) textElement.style.color = color;
+                            if (cursorElement) cursorElement.style.display = 'inline';
+
+                            let idx = 0;
+
+                            function runNext() {
+                                const word = wordsArray[idx];
+                                const isFinal = idx === wordsArray.length - 1;
+
+                                typeText(word, textElement, MULTIWORD_TYPING_SPEED, () => {
+                                    if (isFinal) {
+                                        if (cursorElement) cursorElement.style.display = 'inline';
+                                    } else {
+                                        setTimeout(() => {
+                                            // "backspace" delay between letters
+                                            const backspaceDelay = Math.max(25, TYPING_SPEED - 10);
+                                            backspaceText(textElement, backspaceDelay, () => {
+                                                idx++;
+                                                // delay before next word begins
+                                                setTimeout(runNext, 400);
+                                            });
+                                        }, 250);    // delay before backspace
+                                    }
+                                });
+                            }
+
+                            runNext();
+                        }, 1000); // initial delay before typing sequence begins
+                        titleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            titleObserver.observe(titleContainer);
+        } else {
+            if (!titleContainer) console.error("Missing container:", containerId);
+            if (!textElement) console.error("Missing text span:", textSpanId);
+            if (!cursorElement) console.error("Missing cursor span for:", textSpanId);
+        }
+    }
+
     // Setup for each title
     // Note: The section renaming ("My Journey" to "Timeline", "Let's Connect!" to "Contact Me")
     // will be handled in the next plan step. The JS will use the new names here.
 
-    // Typing animation for "Willie Alcaraz" in About Me section
-    setupTitleAnimation("name-title-container", "name-text", "Willie Alcaraz", accentColor);
+    // title typing animation word cycle
+    setupMultiWordTyping("name-title-container", "name-text", ["Performer", "Photographer", "Developer", "Engineer", "Willie Alcaraz"], accentColor);
     setupTitleAnimation("about-me-title-container", "about-me-name", "About");
 
     setupTitleAnimation("journey-title-container", "journey-title-text", "Timeline");
